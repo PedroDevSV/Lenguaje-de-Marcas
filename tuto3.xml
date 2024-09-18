@@ -1,0 +1,18 @@
+<cfgs>
+	<nombre> Desarrollo de Aplicaciones Web </nombre>
+	<curso> Segundo </curso> 
+	<modulos>
+		<modulo> 
+			<nombre> Lenguaje de Marcas </nombre>
+			<prof> Victor </prof>
+		</modulo>
+		<modulo>
+			<nombre> Diseño de interfaces Web </nombre>
+			<prof> Victor </prof>
+		</modulo>
+		<modulo>
+			<nombre> Despliegue de Aplicaciones </nombre>
+			<prof> Fer </prof>
+		</modulo>
+	</modulos>
+</cfgs>

@@ -1,0 +1,12 @@
+<!--no tiene etiquetas predefinidas, puedes hacer las que quieras
+. Solo debe tener un elemento raíz, que englobe todos los demás-->
+
+<personaje>
+	<nombre> Indiana Jones </nombre>
+	<actor> Harrison Ford </actor>
+	<pelicula> EN busca del Arca perdida </pelicula>
+	<pelicula> Indiana Jones y el templo maldito </pelicula>
+	<pelicula> Indiana Jones y la última cruzada  </pelicula>
+	<pelicula> Indiana Jones y el reino de la calavera de cristal </pelicula>
+	<pelicula> Indiana Jones y el Dial del Destino </pelicula>
+</personaje>
