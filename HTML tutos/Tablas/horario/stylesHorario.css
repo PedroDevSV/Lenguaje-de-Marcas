@@ -1,0 +1,35 @@
+*{
+	font-family: Arial;
+}
+
+.desp{
+	background-color: #339966;
+}
+
+.serv{
+	background-color: #99FF99;
+}
+
+.marcas{
+	background-color: #FF3333;
+}
+
+.cliente{
+	background-color: #66CCFF;
+}
+
+.diseño{
+	background-color: #FFFF99;
+}
+
+.abajo{
+	margin-top: 20px;
+	justify-content: center;
+	align-content: center;
+	display:flex;
+	flex-direction: columns;
+}
+
+.logo{
+	width: 20%;
+}
