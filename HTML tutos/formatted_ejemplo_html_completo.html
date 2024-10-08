@@ -1,0 +1,115 @@
+MARCAS
+
+- Negrita: <b></b>
+- Títulos (de 1 a 6): <h1></h1>, <h2></h2>, hasta <h6></h6>
+- Párrafos: <p></p>
+- Énfasis o cursiva: <i></i>
+- Salto de línea (sin etiqueta de cierre): <br>
+- Hipervínculo: <a href="URL">Texto</a>
+- Abrir en nueva ventana: <a href="URL" target="_blank">Texto</a>
+- Abrir en la misma ventana: <a href="URL" target="_parent">Texto</a>
+- Ancla para hipervínculos dentro de la misma página: <a name="NOMBRE">Texto</a>
+- Ejemplo de hipervínculo dentro de la misma página: <a href="index.html#nombre">Imágenes</a>
+- Lista desordenada: <ul></ul>
+- Lista ordenada: <ol></ol>
+- Elemento de lista: <li></li>
+- Espacios en blanco: &ensp;
+- Tilde en la "a": &aacute;
+- Tilde en la "E": &Eacute;
+- Para la letra "Ñ": &ntilde;
+
+
+IMAGENES
+
+<img src="ruta">
+Texto alternativo en imágenes: <img src="" alt="TEXTO">
+Alto y ancho imágenes: <img src="" height="" width="">
+
+
+TABLAS
+
+Tabla 2 filas 2 columnas
+
+th: titulos en las celdas
+td: resto de celdas
+
+<table>
+	<caption>Horario Escolar</caption> (Titulo de la tabla)
+	<tr>
+		<th>Lunes</th>
+		<th>Martes</th>
+	</tr>
+	<tr>
+		<td>Física</td>
+		<td>Química</td>
+	</tr>
+	</table>
+
+Unir celdas a la derecha: <td colspan="2"></td>
+Unir celdas hacia abajo: <td rowspan="2"></td>
+
+
+ATRIBUTOS:
+
+- border: Grosor de los bordes de la tabla. Un número que representará el grosor en píxeles.
+- width: Ancho de la tabla. Un número o porcentaje %.
+- height: Alto de la tabla. Un número o porcentaje %.
+- cellspacing: Espacio entre las distintas celdas de la tabla. Un número.
+- cellpadding: Espacio entre el borde de la celda y su contenido. Un número.
+- align: Alineación horizontal del contenido de la celda (left, right, center).
+- bgcolor: Color de fondo (Número hexadecimal).
+- bordercolor: Color del borde (Número hexadecimal).
+- background: Imagen de fondo.
+
+
+Formulario
+
+Abrir formulario: <form action"" method="post">
+		  </form>
+Etiqueta: <label for="nombre">Nombre: </label> (el for tiene que coincidir con el nombre de la etiqueta que acompaña ejemplo de texto)
+Text: <input type="text" id="nombre" name="nombre">
+Password: <input type="text" id="usuario" name="usuario">
+Hidden: <input type="hidden" name="autor" value="Vega Media">
+Checkbox: <input type="checkbox" id="info1" name="info1" value="sports">
+	  <label for="info1">Deportes</label><br>
+	  <input type="checkbox" id="info2" name="info2" value="computers">
+	  <label for="info2">Informática</label><br>
+Radio:	<input type="radio" id="val" name="capital" value="valencia"> (en todos tiene que coincidir el name)
+	<label for="val">Valencia</label><br>
+	<input type="radio" id="mur" name="capital" value="murcia">
+	<label for="mur">Murcia</label><br>
+Boton: <input type="button" value="Click Me!" onclick="alert('Hello Word!')">
+Submit: <input type="submit" value="Enviar">
+Reset: <input type="reset" value="Borrar">
+Email: <input type="email" id="correo" name="correo">
+Number: <input type="number" id="cant" name="cant">
+Textarea: <textarea id="comment" name="comment" rows="4" cols="50" placeholder="Esto es un textarea de 4 filas y 50 columnas"></textarea>
+Select: <select name="coches" id="coches">
+	<option value="audi">Audi</option>
+	<option value="mercedes">Mercedes</option>
+	<option value="toyota">Toyota</option>
+	<option value="renault">Renault</option>
+	</select>
+
+Fiieldset y legend(cuadrado alrededor del formulario y texto en ese cuadrado)
+	<fieldset>
+		<legend>Información de contacto</legend>
+	</fieldset>
+
+
+Otras etiquetas input
+
+Fecha: <input type="date" id="fecha">
+Hora: <input type="time" id="hora">
+Paleta de colores: <input type="color" id="color">
+Archivos del sistema: <input type="file" id="archivo">
+Introducir una url: <input type="url" id="url">
+
+Atributos formulario
+
+size=""
+maxlength=""
+placeholder=""
+required
+min=""
+max=""
