@@ -1,0 +1,24 @@
+ *{
+    padding: 20px;
+    margin: 10px;
+ }
+ 
+ h1{
+    font-weight: 700;
+    /* em para movil,responsive */
+    font-size: 1.5em;
+    color: red;
+    background-color: green;
+ }
+
+ span{
+    font-style: italic;
+    color: blueviolet;
+ }
+
+.content{
+    padding: 20%;
+    background-image: url("calabaza.png") ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
