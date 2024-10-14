@@ -1,33 +1,58 @@
 *{
 	font-family: Arial;
+	justify-content: center;
+	
+}
+
+.tabla{
+	
+	width: 80%;
+	padding: 4%;
+	margin: 4% ;
+	margin-bottom: 0;
+	
 }
 
 .desp{
-	background-color: #339966;
+	background-color: #83afd8;
+	padding: 2%;
+	margin: 3%;
 }
 
 .serv{
-	background-color: #99FF99;
+	background-color: #1f8f3b;
+	padding: 2%;
+	margin: 3%;
 }
 
 .marcas{
-	background-color: #FF3333;
+	background-color: #f32ba0;
+	border-width: 0 0 0 0;
+	padding: 2%;
+	margin: 3%;
 }
 
 .cliente{
-	background-color: #66CCFF;
+	background-color: #1f5bb6;
+	padding: 2%;
+	margin: 3%;
 }
 
 .diseño{
-	background-color: #FFFF99;
+	background-color: #d4d436;
+	padding: 2%;
+	margin: 3%;
 }
 
 .abajo{
-	margin-top: 20px;
+	margin-top: 10px;
 	justify-content: center;
 	align-content: center;
 	display:flex;
 	flex-direction: columns;
+	padding: 2%;
+	
+	
 }
 
 .logo{
