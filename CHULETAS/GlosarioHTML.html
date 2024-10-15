@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glosario de HTML</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      background-color: #f0f0f0;
+      overflow: hidden;
+    }
+
+    nav li {
+      float: left;
+    }
+
+    nav a {
+      display: block;
+      color: #333;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      background-color: #ddd;
+    }
+
+    section {
+      padding: 20px;
+      margin-top: 20px;
+      border: 1px solid #ddd;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    code {
+      background-color: #f5f5f5;
+      padding: 2px 4px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    th,
+    td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="#estructura">Estructura básica</a></li>
+      <li><a href="#etiquetas">Etiquetas comunes</a></li>
+      <li><a href="#atributos">Atributos</a></li>
+      <li><a href="#entidades">Entidades</a></li>
+      <li><a href="#tablas">Tablas</a></li>
+      <li><a href="#formularios">Formularios</a></li>
+      <li><a href="#multimedia">Multimedia</a></li>
+      <li><a href="#semantica">Semántica</a></li>
+      <li><a href="#metadatos">Metadatos</a></li>
+      <li><a href="#iframes">Iframes</a></li>
+    </ul>
+  </nav>
+
+  <section id="estructura">
+    <h2>Estructura básica de un documento HTML</h2>
+    <p>Un documento HTML tiene la siguiente estructura básica:</p>
+    <code>
+      &lt;!DOCTYPE html&gt;<br>
+      &lt;html lang="es"&gt;<br>
+      &lt;head&gt;<br>
+      &nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;<br>
+      &nbsp;&nbsp;&lt;title&gt;Título de la página&lt;/title&gt;<br>
+      &lt;/head&gt;<br>
+      &lt;body&gt;<br>
+      &nbsp;&nbsp;&lt;h1&gt;Esto es un encabezado&lt;/h1&gt;<br>
+      &nbsp;&nbsp;&lt;p&gt;Esto es un párrafo.&lt;/p&gt;<br>
+      &lt;/body&gt;<br>
+      &lt;/html&gt;
+    </code>
+    <p><strong>Explicación:</strong></p>
+    <ul>
+      <li><code>&lt;!DOCTYPE html&gt;</code>: Define el tipo de documento como HTML5.</li>
+      <li><code>&lt;html lang="es"&gt;</code>: Etiqueta raíz del documento. El atributo <code>lang</code> especifica el idioma.</li>
+      <li><code>&lt;head&gt;</code>: Contiene información sobre la página, como el título.</li>
+      <li><code>&lt;title&gt;</code>: Define el título que aparece en la pestaña del navegador.</li>
+      <li><code>&lt;body&gt;</code>: Contiene el contenido visible de la página.</li>
+      <li><code>&lt;h1&gt;</code>: Define un encabezado de nivel 1.</li>
+      <li><code>&lt;p&gt;</code>: Define un párrafo.</li>
+    </ul>
+  </section>
+
+  <section id="etiquetas">
+    <h2>Etiquetas comunes</h2>
+    <p>Aquí tienes algunos ejemplos de etiquetas HTML comunes:</p>
+    <h3>Encabezados</h3>
+    <code>
+      &lt;h1&gt;Encabezado 1&lt;/h1&gt;<br>
+      &lt;h2&gt;Encabezado 2&lt;/h2&gt;<br>
+      &lt;h3&gt;Encabezado 3&lt;/h3&gt;<br>
+      &lt;h4&gt;Encabezado 4&lt;/h4&gt;<br>
+      &lt;h5&gt;Encabezado 5&lt;/h5&gt;<br>
+      &lt;h6&gt;Encabezado 6&lt;/h6&gt;
+    </code>
+    <h3>Párrafos y saltos de línea</h3>
+    <code>
+      &lt;p&gt;Esto es un párrafo.&lt;/p&gt;<br>
+      &lt;p&gt;Esto es otro párrafo.&lt;/p&gt;<br>
+      &lt;br&gt; </code>
+    <h3>Énfasis</h3>
+    <code>
+      &lt;strong&gt;Texto en negrita&lt;/strong&gt;<br>
+      &lt;em&gt;Texto en cursiva&lt;/em&gt;<br>
+      &lt;mark&gt;Texto resaltado&lt;/mark&gt;<br>
+      &lt;del&gt;Texto tachado&lt;/del&gt;<br>
+      &lt;ins&gt;Texto insertado&lt;/ins&gt;
+    </code>
+    <h3>Listas</h3>
+    <p>Lista desordenada:</p>
+    <code>
+      &lt;ul&gt;<br>
+      &nbsp;&nbsp;&lt;li&gt;Elemento 1&lt;/li&gt;<br>
+      &nbsp;&nbsp;&lt;li&gt;Elemento 2&lt;/li&gt;<br>
+      &lt;/ul&gt;
+    </code>
+    <p>Lista ordenada:</p>
+    <code>
+      &lt;ol&gt;<br>
+      &nbsp;&nbsp;&lt;li&gt;Elemento 1&lt;/li&gt;<br>
+      &nbsp;&nbsp;&lt;li&gt;Elemento 2&lt;/li&gt;<br>
+      &lt;/ol&gt;
+    </code>
+    <p>Lista de definición:</p>
+    <code>
+      &lt;dl&gt;<br>
+      &nbsp;&nbsp;&lt;dt&gt;Término 1&lt;/dt&gt;<br>
+      &nbsp;&nbsp;&lt;dd&gt;Definición del término 1&lt;/dd&gt;<br>
+      &nbsp;&nbsp;&lt;dt&gt;Término 2&lt;/dt&gt;<br>
+      &nbsp;&nbsp;&lt;dd&gt;Definición del término 2&lt;/dd&gt;<br>
+      &lt;/dl&gt;
+    </code>
+    <h3>Enlaces</h3>
+    <code>
+      &lt;a href="https://www.ejemplo.com"&gt;Enlace a ejemplo.com&lt;/a&gt;
+    </code>
+    <h3>Imágenes</h3>
+    <code>
+      &lt;img src="imagen.jpg" alt="Descripción de la imagen"&gt;
+    </code>
+    <h3>Divisiones</h3>
+    <code>
+      &lt;div&gt;Esto es una división.&lt;/div&gt;
+    </code>
+    <h3>Líneas horizontales</h3>
+    <code>
+      &lt;hr&gt;
+    </code>
+  </section>
+
+  <section id="atributos">
+    <h2>Atributos</h2>
+    <p>Los atributos proporcionan información adicional sobre las etiquetas HTML.</p>
+    <p>Ejemplos:</p>
+    <code>
+      &lt;a href="https://www.ejemplo.com" target="_blank"&gt;Abrir enlace en una nueva pestaña&lt;/a&gt;<br>
+      &lt;img src="imagen.jpg" alt="Descripción de la imagen" width="300"&gt;<<br>
+      &lt;p style="color: blue;"&gt;Párrafo con texto azul&lt;/p&gt;
+    </code>
+    <p><strong>Explicación:</strong></p>
+    <ul>
+      <li><code>target="_blank"</code>: Abre el enlace en una nueva pestaña del navegador.</li>
+      <li><code>width="300"</code>: Define el ancho de la imagen en píxeles.</li>
+      <li><code>style="color: blue;"</code>: Define el color del texto como azul.</li>
+    </ul>
+    <p>Aquí tienes una tabla con algunos atributos comunes:</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Atributo</th>
+          <th>Descripción</th>
+          <th>Ejemplo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>href</code></td>
+          <td>Especifica la URL a la que apunta un enlace.</td>
+          <td><code>&lt;a href="https://www.ejemplo.com"&gt;</code></td>
+        </tr>
+        <tr>
+          <td><code>src</code></td>
+          <td>Especifica la URL de una imagen o recurso externo.</td>
+          <td><code>&lt;img src="imagen.jpg"&gt;</code></td>
+        </tr>
+        <tr>
+          <td><code>alt</code></td>
+          <td>Especifica un texto alternativo para una imagen.</td>
+          <td><code>&lt;img src="imagen.jpg" alt="Descripción de la imagen"&gt;</code></td>
+        </tr>
+        <tr>
+          <td><code>width</code></td>
+          <td>Especifica el ancho de un elemento.</td>
+          <td><code>&lt;img src="imagen.jpg" width="300"&gt;</code></td>
+        </tr>
+        <tr>
+          <td><code>height</code></td>
+          <td>Especifica la altura de un elemento.</td>
+          <td><code>&lt;img src="imagen.jpg" height="200"&gt;</code></td>
+        </tr>
+        <tr>
+          <td><code>style</code></td>
+          <td>Especifica estilos en línea para un elemento.</td>
+          <td><code>&lt;p style="color: blue;"&gt;</code></td>
+        </tr>
+        <tr>
+          <td><code>class</code></td>
+          <td>Especifica una o más clases para un elemento.</td>
+          <td><code>&lt;div class="mi-clase"&gt;</code></td>
+        </tr>
+        <tr>
+          <td><code>id</code></td>
+          <td>Especifica un identificador único para un elemento.</td>
+          <td><code>&lt;p id="mi-parrafo"&gt;</code></td>
+        </tr>
+        <tr>
+          <td><code>title</code></td>
+          <td>Especifica un texto informativo que se muestra al pasar el cursor sobre el elemento.</td>
+          <td><code>&lt;a href="#" title="Más información"&gt;</code></td>
+        </tr>
+        <tr>
+          <td><code>disabled</code></td>
+          <td>Deshabilita un elemento de formulario.</td>
+          <td><code>&lt;button disabled&gt;</code></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="entidades">
+    <h2>Entidades</h2>
+    <p>Las entidades se utilizan para mostrar caracteres especiales en HTML.</p>
+    <p>Ejemplos:</p>
+    <code>
+      &lt;p&gt;Menor que: &amp;lt;&lt;/p&gt;<br>
+      &lt;p&gt;Mayor que: &amp;gt;&lt;/p&gt;<br>
+      &lt;p&gt;Ampersand: &amp;amp;&lt;/p&gt;<br>
+      &lt;p&gt;Copyright: &amp;copy;&lt;/p&gt;
+    </code>
+    <p><strong>Resultado:</strong></p>
+    <p>Menor que: &lt;</p>
+    <p>Mayor que: &gt;</p>
+    <p>Ampersand: &amp;</p>
+    <p>Copyright: ©</p>
+    <p>Aquí tienes una tabla con algunas entidades comunes:</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Entidad</th>
+          <th>Descripción</th>
+          <th>Carácter</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>&amp;lt;</code></td>
+          <td>Menor que</td>
+          <td>&lt;</td>
+        </tr>
+        <tr>
+          <td><code>&amp;gt;</code></td>
+          <td>Mayor que</td>
+          <td>&gt;</td>
+        </tr>
+        <tr>
+          <td><code>&amp;amp;</code></td>
+          <td>Ampersand</td>
+          <td>&amp;</td>
+        </tr>
+        <tr>
+          <td><code>&amp;quot;</code></td>
+          <td>Comillas dobles</td>
+          <td>"</td>
+        </tr>
+        <tr>
+          <td><code>&amp;apos;</code></td>
+          <td>Apóstrofe</td>
+          <td>'</td>
+        </tr>
+        <tr>
+          <td><code>&amp;nbsp;</code></td>
+          <td>Espacio en blanco sin romper</td>
+          <td> </td>
+        </tr>
+        <tr>
+          <td><code>&amp;copy;</code></td>
+          <td>Copyright</td>
+          <td>©</td>
+        </tr>
+        <tr>
+          <td><code>&amp;reg;</code></td>
+          <td>Marca registrada</td>
+          <td>®</td>
+        </tr>
+        <tr>
+          <td><code>&amp;euro;</code></td>
+          <td>Euro</td>
+          <td>€</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="tablas">
+    <h2>Tablas</h2>
+    <p>Las tablas se utilizan para organizar datos en filas y columnas.</p>
+    <code>
+      &lt;table&gt;<br>
+      &nbsp;&nbsp;&lt;thead&gt;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Encabezado 1&lt;/th&gt;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Encabezado 2&lt;/th&gt;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+      &nbsp;&nbsp;&lt;/thead&gt;<br>
+      &nbsp;&nbsp;&lt;tbody&gt;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Dato 1&lt;/td&gt;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Dato 2&lt;/td&gt;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Dato 3&lt;/td&gt;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Dato 4&lt;/td&gt;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+      &nbsp;&nbsp;&lt;/tbody&gt;<br>
+      &lt;/table&gt;
+    </code>
+    <p><strong>Explicación:</strong></p>
+    <ul>
+      <li><code>&lt;table&gt;</code>: Define la tabla.</li>
+      <li><code>&lt;thead&gt;</code>: Define el encabezado de la tabla.</li>
+      <li><code>&lt;tbody&gt;</code>: Define el cuerpo de la tabla.</li>
+      <li><code>&lt;tr&gt;</code>: Define una fila de la tabla.</li>
+      <li><code>&lt;th&gt;</code>: Define una celda de encabezado.</li>
+      <li><code>&lt;td&gt;</code>: Define una celda de datos.</li>
+    </ul>
+    <p><strong>Atributos adicionales:</strong></p>
+    <ul>
+      <li><code>border</code>: Define un borde para la tabla.</li>
+      <li><code>cellpadding</code>: Define el espacio entre el contenido de una celda y su borde.</li>
+      <li><code>cellspacing</code>: Define el espacio entre las celdas.</li>
+      <li><code>colspan</code>: Define el número de columnas que debe abarcar una celda.</li>
+      <li><code>rowspan</code>: Define el número de filas que debe abarcar una celda.</li>
+    </ul>
+  </section>
+
+  <section id="formularios">
+    <h2>Formularios</h2>
+    <p>Los formularios se utilizan para recopilar información del usuario.</p>
+    <code>
+      &lt;form action="/procesar_datos" method="post"&gt;<br>
+      &nbsp;&nbsp;&lt;label for="nombre"&gt;Nombre:&lt;/label&gt;<br>
+      &nbsp;&nbsp;&lt;input type="text" id="nombre" name="nombre"&gt;<br>
+      &nbsp;&nbsp;&lt;br&gt;<br>
+      &nbsp;&nbsp;&lt;label for="email"&gt;Email:&lt;/label&gt;<br>
+      &nbsp;&nbsp;&lt;input type="email" id="email" name="email"&gt;<br>
+      &nbsp;&nbsp;&lt;br&gt;<br>
+      &nbsp;&nbsp;&lt;input type="submit" value="Enviar"&gt;<br>
+      &lt;/form&gt;
+    </code>
+    <p><strong>Explicación:</strong></p>
+    <ul>
+      <li><code>&lt;form&gt;</code>: Define el formulario.</li>
+      <li><code>action</code>: Especifica la URL a la que se enviarán los datos del formulario.</li>
+      <li><code>method</code>: Especifica el método HTTP para enviar los datos (get o post).</li>
+      <li><code>&lt;label&gt;</code>: Define una etiqueta para un elemento de formulario.</li>
+      <li><code>&lt;input&gt;</code>: Define un campo de entrada.</li>
+      <li><code>type</code>: Especifica el tipo de campo de entrada (texto, email, contraseña, etc.).</li>
+      <li><code>&lt;input type="submit"&gt;</code>: Define un botón de envío.</li>
+    </ul>
+    <h3>Tipos de input</h3>
+    <p>Aquí tienes una tabla con algunos tipos de input comunes:</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Tipo</th>
+          <th>Descripción</th>
+          <th>Ejemplo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>text</code></td>
+          <td>Campo de texto de una sola línea.</td>
+          <td><code>&lt;input type="text" name="nombre"&gt;</code></td>
+        </tr>
+        <tr>
+          <td><code>password</code></td>
+          <td>Campo de contraseña que oculta los caracteres introducidos.</td>
+          <td><code>&lt;input type="password" name="contraseña"&gt;</code></td>
+        </tr>
+        <tr>
+          <td><code>email</code></td>
+          <td>Campo de correo electrónico que valida el formato.</td>
+          <td><code>&lt;input type="email" name="email"&gt;</code></td>
+        </tr>
+        <tr>
+          <td><code>number</code></td>
+          <td>Campo numérico que solo permite introducir números.</td>
+          <td><code>&lt;input type="number" name="edad"&gt;</code></td>
+        </tr>
+        <tr>
+          <td><code>date</code></td>
+          <td>Campo de fecha que permite seleccionar una fecha.</td>
+          <td><code>&lt;input type="date" name="fecha_nacimiento"&gt;</code></td>
+        </tr>
+        <tr>
+          <td><code>checkbox</code></td>
+          <td>Casilla de verificación que permite seleccionar una o varias opciones.</td>
+          <td><code>&lt;input type="checkbox" name="intereses" value="deportes"&gt; Deportes</code></td>
+        </tr>
+        <tr>
+          <td><code>radio</code></td>
+          <td>Botón de opción que permite seleccionar una sola opción de un grupo.</td>
+          <td><code>&lt;input type="radio" name="genero" value="masculino"&gt; Masculino</code></td>
+        </tr>
+        <tr>
+          <td><code>file</code></td>
+          <td>Campo para seleccionar un archivo.</td>
+          <td><code>&lt;input type="file" name="archivo"&gt;</code></td>
+        </tr>
+        <tr>
+          <td><code>submit</code></td>
+          <td>Botón para enviar el formulario.</td>
+          <td><code>&lt;input type="submit" value="Enviar"&gt;</code></td>
+        </tr>
+        <tr>
+          <td><code>reset</code></td>
+          <td>Botón para restablecer los valores del formulario.</td>
+          <td><code>&lt;input type="reset" value="Restablecer"&gt;</code></td>
+        </tr>
+        <tr>
+          <td><code>button</code></td>
+          <td>Botón genérico que no tiene una acción predefinida.</td>
+          <td><code>&lt;input type="button" value="Haz clic"&gt;</code></td>
+        </tr>
+        <tr>
+          <td><code>hidden</code></td>
+          <td>Campo oculto que no se muestra al usuario.</td>
+          <td><code>&lt;input type="hidden" name="id" value="123"&gt;</code></td>
+        </tr>
+      </tbody>
+    </table>
+    <p><strong>Otros elementos de formulario:</strong></p>
+    <ul>
+      <li><code>&lt;textarea&gt;</code>: Define un área de texto de varias líneas.</li>
+      <li><code>&lt;select&gt;</code>: Define una lista desplegable.</li>
+      <li><code>&lt;option&gt;</code>: Define una opción en una lista desplegable.</li>
+      <li><code>&lt;fieldset&gt;</code>: Agrupa elementos de formulario.</li>
+      <li><code>&lt;legend&gt;</code>: Define una leyenda para un <code>&lt;fieldset&gt;</code>.</li>
+    </ul>
+  </section>
+
+  <section id="multimedia">
+    <h2>Multimedia</h2>
+    <p>HTML permite incrustar contenido multimedia como audio y video.</p>
+    <h3>Audio</h3>
+    <code>
+      &lt;audio controls&gt;<br>
+      &nbsp;&nbsp;&lt;source src="audio.mp3" type="audio/mpeg"&gt;<br>
+      &nbsp;&nbsp;&lt;source src="audio.ogg" type="audio/ogg"&gt;<br>
+      &lt;p&gt;Tu navegador no soporta el elemento audio.&lt;/p&gt;<br>
+      &lt;/audio&gt;
+    </code>
+    <p><strong>Explicación:</strong></p>
+    <ul>
+      <li><code>&lt;audio&gt;</code>: Define el elemento de audio.</li>
+      <li><code>controls</code>: Muestra los controles de reproducción (reproducir, pausar, volumen, etc.).</li>
+      <li><code>&lt;source&gt;</code>: Especifica diferentes fuentes de audio para compatibilidad con diferentes navegadores.</li>
+      <li><code>type</code>: Especifica el tipo MIME del archivo de audio.</li>
+    </ul>
+    <h3>Video</h3>
+    <code>
+      &lt;video width="640" height="360" controls&gt;<br>
+      &nbsp;&nbsp;&lt;source src="video.mp4" type="video/mp4"&gt;<br>
+      &nbsp;&nbsp;&lt;source src="video.webm" type="video/webm"&gt;<br>
+      &lt;p&gt;Tu navegador no soporta el elemento video.&lt;/p&gt;<br>
+      &lt;/video&gt;
+    </code>
+    <p><strong>Explicación:</strong></p>
+    <ul>
+      <li><code>&lt;video&gt;</code>: Define el elemento de video.</li>
+      <li><code>width</code> y <code>height</code>: Especifican el ancho y alto del reproductor de video.</li>
+      <li><code>controls</code>: Muestra los controles de reproducción.</li>
+      <li><code>&lt;source&gt;</code>: Especifica diferentes fuentes de video para compatibilidad.</li>
+      <li><code>type</code>: Especifica el tipo MIME del archivo de video.</li>
+    </ul>
+  </section>
+
+  <section id="semantica">
+    <h2>Semántica</h2>
+    <p>HTML5 introduce nuevas etiquetas semánticas que dan significado al contenido.</p>
+    <p>Ejemplos:</p>
+    <code>
+      &lt;header&gt;...&lt;/header&gt;<br>
+      &lt;nav&gt;...&lt;/nav&gt;<br>
+      &lt;main&gt;...&lt;/main&gt;<br>
+      &lt;article&gt;...&lt;/article&gt;<br>
+      &lt;aside&gt;...&lt;/aside&gt;<br>
+      &lt;footer&gt;...&lt;/footer&gt;
+    </code>
+    <p><strong>Explicación:</strong></p>
+    <ul>
+      <li><code>&lt;header&gt;</code>: Define el encabezado de una página o sección.</li>
+      <li><code>&lt;nav&gt;</code>: Define un bloque de navegación.</li>
+      <li><code>&lt;main&gt;</code>: Define el contenido principal de una página.</li>
+      <li><code>&lt;article&gt;</code>: Define un artículo independiente.</li>
+      <li><code>&lt;aside&gt;</code>: Define contenido relacionado con el contenido principal (como una barra lateral).</li>
+      <li><code>&lt;footer&gt;</code>: Define el pie de página de una página o sección.</li>
+    </ul>
+    <p>Utilizar etiquetas semánticas mejora la accesibilidad y el SEO de tu sitio web.</p>
+  </section>
+
+  <section id="metadatos">
+    <h2>Metadatos</h2>
+    <p>Los metadatos proporcionan información sobre el documento HTML. Se incluyen en la sección <code>&lt;head&gt;</code> y no se muestran en la página.</p>
+    <p>Ejemplos:</p>
+    <code>
+      &lt;meta charset="UTF-8"&gt;<br>
+      &lt;meta name="description" content="Descripción de la página"&gt;<br>
+      &lt;meta name="keywords" content="palabra clave 1, palabra clave 2"&gt;<br>
+      &lt;meta name="author" content="Autor de la página"&gt;<br>
+      &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    </code>
+    <p><strong>Explicación:</strong></p>
+    <ul>
+      <li><code>&lt;meta charset="UTF-8"&gt;</code>: Define la codificación de caracteres del documento.</li>
+      <li><code>&lt;meta name="description" content="..."&gt;</code>: Define una descripción de la página para los motores de búsqueda.</li>
+      <li><code>&lt;meta name="keywords" content="..."&gt;</code>: Define palabras clave relevantes para la página.</li>
+      <li><code>&lt;meta name="author" content="..."&gt;</code>: Define el autor de la página.</li>
+      <li><code>&lt;meta name="viewport" content="..."&gt;</code>: Configura cómo se muestra la página en diferentes dispositivos.</li>
+    </ul>
+  </section>
+
+  <section id="iframes">
+    <h2>Iframes</h2>
+    <p>Los iframes permiten incrustar otra página web dentro de la página actual.</p>
+    <p>Ejemplo:</p>
+    <code>
+      &lt;iframe src="https://www.ejemplo.com" width="800" height="600"&gt;&lt;/iframe&gt;
+    </code>
+    <p><strong>Explicación:</strong></p>
+    <ul>
+      <li><code>&lt;iframe&gt;</code>: Define el iframe.</li>
+      <li><code>src</code>: Especifica la URL de la página web que se va a incrustar.</li>
+      <li><code>width</code> y <code>height</code>: Especifican el ancho y alto del iframe.</li>
+    </ul>
+    <p><strong>Atributos adicionales:</strong></p>
+    <ul>
+      <li><code>title</code>: Especifica un título para el iframe.</li>
+      <li><code>allowfullscreen</code>: Permite que el iframe se muestre en pantalla completa.</li>
+      <li><code>sandbox</code>: Aplica restricciones de seguridad al iframe.</li>
+    </ul>
+  </section>
+
+</body>
+</html>

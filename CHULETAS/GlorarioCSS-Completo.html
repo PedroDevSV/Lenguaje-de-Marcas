@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glosario de CSS</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      background-color: #f0f0f0;
+      overflow: hidden;
+    }
+
+    nav li {
+      float: left;
+    }
+
+    nav a {
+      display: block;
+      color: #333;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      background-color: #ddd;
+    }
+
+    section {
+      padding: 20px;
+      margin-top: 20px;
+      border: 1px solid #ddd;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    code {
+      background-color: #f5f5f5;
+      padding: 2px 4px;
+      border-radius: 4px;
+      font-family: monospace;
+      display: block;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+
+    .ejemplo {
+      width: 100%;
+      margin-top: 10px;
+      border: 1px solid #ddd;
+      padding: 10px;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    th,
+    td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="#sintaxis">Sintaxis básica</a></li>
+      <li><a href="#selectores">Selectores</a></li>
+      <li><a href="#unidades">Unidades</a></li>
+      <li><a href="#colores">Colores</a></li>
+      <li><a href="#texto">Propiedades de texto</a></li>
+      <li><a href="#fondo">Propiedades de fondo</a></li>
+      <li><a href="#bordes">Propiedades de bordes</a></li>
+      <li><a href="#modelo_caja">Modelo de caja</a></li>
+      <li><a href="#display">Display</a></li>
+      <li><a href="#posicionamiento">Posicionamiento</a></li>
+      <li><a href="#float">Float</a></li>
+      <li><a href="#flexbox">Flexbox</a></li>
+      <li><a href="#grid">Grid</a></li>
+      <li><a href="#media_queries">Media Queries</a></li>
+      <li><a href="#animaciones">Animaciones</a></li>
+      <li><a href="#transiciones">Transiciones</a></li>
+      <li><a href="#transformaciones">Transformaciones</a></li>
+    </ul>
+  </nav>
+
+  <section id="sintaxis">
+    <h2>Sintaxis básica de CSS</h2>
+    <p>Una regla CSS tiene la siguiente estructura:</p>
+    <code>
+      selector {<br>
+      &nbsp;&nbsp;propiedad: valor;<br>
+      &nbsp;&nbsp;propiedad: valor;<br>
+      }
+    </code>
+    <p><strong>Explicación:</strong></p>
+    <ul>
+      <li><strong>selector</strong>: Indica a qué elemento(s) HTML se aplicará la regla.</li>
+      <li><strong>propiedad</strong>: Es el atributo que se quiere modificar (color, tamaño, etc.).</li>
+      <li><strong>valor</strong>: Es el valor que se asigna a la propiedad.</li>
+    </ul>
+    <p><strong>Ejemplo:</strong></p>
+    <code>
+      p {<br>
+      &nbsp;&nbsp;color: blue;<br>
+      &nbsp;&nbsp;font-size: 16px;<br>
+      }
+    </code>
+    <p>Este código CSS hará que todos los párrafos (&lt;p&gt;) tengan texto azul y un tamaño de fuente de 16 píxeles.</p>
+  </section>
+
+  <section id="selectores">
+    <h2>Selectores</h2>
+    <p>Los selectores se utilizan para "seleccionar" los elementos HTML a los que se aplicarán las reglas CSS.</p>
+    <h3>Tipos de selectores:</h3>
+    <ul>
+      <li><strong>Selector de etiqueta:</strong> Selecciona elementos por su nombre de etiqueta (p, h1, div, etc.).<br>
+        <code>p { color: green; }</code></li>
+      <li><strong>Selector de clase:</strong> Selecciona elementos por su atributo de clase (<code>.mi-clase</code>).<br>
+        <code>.destacado { font-weight: bold; }</code></li>
+      <li><strong>Selector de ID:</strong> Selecciona un elemento por su atributo de ID (<code>#mi-elemento</code>).<br>
+        <code>#menu { background-color: #f0f0f0; }</code></li>
+      <li><strong>Selector universal:</strong> Selecciona todos los elementos (<code>*</code>).<br>
+        <code>* { box-sizing: border-box; }</code></li>
+      <li><strong>Selector de atributo:</strong> Selecciona elementos en función de sus atributos (<code>[type="text"]</code>).<br>
+        <code>input[type="text"] { background-color: light yellow; }</code></li>
+      <li><strong>Selectores descendientes:</strong> Selecciona elementos que son descendientes de otro elemento (<code>div p</code>).<br>
+        <code>div p { font-size: 14px; }</code></li>
+      <li><strong>Selectores hijos:</strong> Selecciona elementos que son hijos directos de otro elemento (<code>div > p</code>).<br>
+        <code>div > p { color: red; }</code></li>
+      <li><strong>Selectores adyacentes:</strong> Selecciona un elemento que está inmediatamente después de otro elemento (<code>h1 + p</code>).<br>
+        <code>h1 + p { margin-top: 0; }</code></li>
+      <li><strong>Pseudo-clases:</strong> Selecciona elementos en función de su estado (<code>:hover</code>, <code>:active</code>, <code>:focus</code>).<br>
+        <code>a:hover { text-decoration: underline; }</code></li>
+      <li><strong>Pseudo-elementos:</strong> Selecciona una parte específica de un elemento (<code>::before</code>, <code>::after</code>, <code>::first-line</code>).<br>
+        <code>p::first-letter { font-size: 2em; }</code></li>
+    </ul>
+    <div class="ejemplo">
+      <h3>Ejemplo de selectores</h3>
+      <div>
+        <p>Párrafo dentro de un div.</p>
+      </div>
+      <p>Párrafo fuera del div.</p>
+      <p class="destacado">Párrafo con clase "destacado".</p>
+      <p id="unico">Párrafo con ID "unico".</p>
+    </div>
+  </section>
+
+  <section id="unidades">
+    <h2>Unidades</h2>
+    <p>Las unidades se utilizan para especificar valores para las propiedades CSS.</p>
+    <h3>Tipos de unidades:</h3>
+    <ul>
+      <li><strong>Absolutas:</strong>
+        <ul>
+          <li><code>px</code> (píxeles): Unidad de medida fija.<br>
+            <code>p { font-size: 16px; }</code></li>
+          <li><code>cm</code> (centímetros)<br>
+            <code>div { width: 10cm; }</code></li>
+          <li><code>mm</code> (milímetros)<br>
+            <code>img { border-width: 2mm; }</code></li>
+          <li><code>in</code> (pulgadas)<br>
+            <code>section { margin: 1in; }</code></li>
+          <li><code>pt</code> (puntos)<br>
+            <code>h1 { font-size: 24pt; }</code></li>
+          <li><code>pc</code> (picas)<br>
+            <code>.box { line-height: 1.5pc; }</code></li</ul>
+      </li>
+      <li><strong>Relativas:</strong>
+        <ul>
+          <li><code>%</code> (porcentaje): Relativo al elemento padre.<br>
+            <code>div { width: 50%; }</code></li>
+          <li><code>em</code>: Relativo al tamaño de fuente del elemento.<br>
+            <code>p { margin-bottom: 1em; }</code></li>
+          <li><code>rem</code>: Relativo al tamaño de fuente del elemento raíz (html).<br>
+            <code>h1 { font-size: 2rem; }</code></li>
+          <li><code>vw</code> (viewport width): Relativo al ancho de la ventana gráfica.<br>
+            <code>.container { width: 80vw; }</code></li>
+          <li><code>vh</code> (viewport height): Relativo al alto de la ventana gráfica.<br>
+            <code>.hero { height: 100vh; }</code></li>
+        </ul>
+      </li>
+    </ul>
+    <p><strong>Ejemplo combinado:</strong></p>
+    <code>
+      .box {<br>
+      &nbsp;&nbsp;width: 200px; /* Píxeles */<br>
+      &nbsp;&nbsp;height: 100px; /* Píxeles */<br>
+      &nbsp;&nbsp;padding: 10px; /* Píxeles */<br>
+      &nbsp;&nbsp;margin: 1em; /* em */<br>
+      &nbsp;&nbsp;border: 2px solid black; /* Píxeles */<br>
+      }
+    </code>
+    <div class="ejemplo">
+      <h3>Ejemplo de unidades</h3>
+      <div class="box"></div>
+    </div>
+  </section>
+
+  <section id="colores">
+    <h2>Colores</h2>
+    <p>Hay varias formas de especificar colores en CSS:</p>
+    <ul>
+      <li><strong>Nombres de colores:</strong> red, blue, green, black, white, etc.<br>
+        <code>p { color: red; }</code></li>
+      <li><strong>Códigos hexadecimales:</strong> #RRGGBB (ej. #FF0000 para rojo).<br>
+        <code>h1 { color: #0000FF; } /* Azul */</code></li>
+      <li><strong>RGB:</strong> rgb(rojo, verde, azul) (ej. rgb(255, 0, 0) para rojo).<br>
+        <code>div { background-color: rgb(0, 255, 0); } /* Verde */</code></li>
+      <li><strong>RGBA:</strong> rgba(rojo, verde, azul, alfa) (ej. rgba(255, 0, 0, 0.5) para rojo semitransparente).<br>
+        <code>.overlay { background-color: rgba(0, 0, 0, 0.5); } /* Negro semitransparente */</code></li>
+      <li><strong>HSL:</strong> hsl(tono, saturación, luminosidad) (ej. hsl(0, 100%, 50%) para rojo).<br>
+        <code>a { color: hsl(120, 100%, 50%); } /* Verde */</code></li>
+      <li><strong>HSLA:</strong> hsla(tono, saturación, luminosidad, alfa) (ej. hsla(0, 100%, 50%, 0.5) para rojo semitransparente).<br>
+        <code>.highlight { background-color: hsla(60, 100%, 50%, 0.3); } /* Amarillo semitransparente */</code></li>
+    </ul>
+    <div class="ejemplo">
+      <h3>Ejemplo de colores</h3>
+      <p style="color: blue;">Texto en azul (nombre de color).</p>
+      <p style="color: #FF0000;">Texto en rojo (hexadecimal).</p>
+      <p style="color: rgb(0, 255, 0);">Texto en verde (RGB).</p>
+      <p style="color: rgba(255, 0, 0, 0.5);">Texto en rojo semitransparente (RGBA).</p>
+    </div>
+  </section>
+
+  <section id="texto">
+    <h2>Propiedades de texto</h2>
+    <p>CSS ofrece muchas propiedades para controlar la apariencia del texto:</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Propiedad</th>
+          <th>Descripción</th>
+          <th>Ejemplo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>color</code></td>
+          <td>Define el color del texto.</td>
+          <td><code>color: blue;</code></td>
+        </tr>
+        <tr>
+          <td><code>font-family</code></td>
+          <td>Define la familia de fuentes.</td>
+          <td><code>font-family: Arial, sans-serif;</code></td>
+        </tr>
+        <tr>
+          <td><code>font-size</code></td>
+          <td>Define el tamaño de la fuente.</td>
+          <td><code>font-size: 16px;</code></td>
+        </tr>
+        <tr>
+          <td><code>font-weight</code></td>
+          <td>Define el grosor de la fuente (normal, bold, etc.).</td>
+          <td><code>font-weight: bold;</code></td>
+        </tr>
+        <tr>
+          <td><code>font-style</code></td>
+          <td>Define el estilo de la fuente (normal, italic, oblique).</td>
+          <td><code>font-style: italic;</code></td>
+        </tr>
+        <tr>
+          <td><code>text-align</code></td>
+          <td>Define la alineación del texto (left, center, right, justify).</td>
+          <td><code>text-align: center;</code></td>
+        </tr>
+        <tr>
+          <td><code>text-decoration</code></td>
+          <td>Define la decoración del texto (none, underline, overline, line-through).</td>
+          <td><code>text-decoration: underline;</code></td>
+        </tr>
+        <tr>
+          <td><code>text-transform</code></td>
+          <td>Define la transformación del texto (none, uppercase, lowercase, capitalize).</td>
+          <td><code>text-transform: uppercase;</code></td>
+        </tr>
+        <tr>
+          <td><code>line-height</code></td>
+          <td>Define la altura de la línea.</td>
+          <td><code>line-height: 1.5;</code></td>
+        </tr>
+        <tr>
+          <td><code>letter-spacing</code></td>
+          <td>Define el espacio entre las letras.</td>
+          <td><code>letter-spacing: 2px;</code></td>
+        </tr>
+        <tr>
+          <td><code>word-spacing</code></td>
+          <td>Define el espacio entre las palabras.</td>
+          <td><code>word-spacing: 5px;</code></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="ejemplo">
+      <h3>Ejemplo de propiedades de texto</h3>
+      <p style="font-family: 'Courier New', monospace; font-size: 20px; font-weight: bold; font-style: italic; text-align: center; text-decoration: underline; text-transform: uppercase; line-height: 2; letter-spacing: 5px; word-spacing: 10px;">
+        Ejemplo de texto con diferentes propiedades.
+      </p>
+    </div>
+  </section>
+
+  <section id="fondo">
+    <h2>Propiedades de fondo</h2>
+    <p>CSS permite controlar la apariencia del fondo de los elementos:</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Propiedad</th>
+          <th>Descripción</th>
+          <th>Ejemplo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>background-color</code></td>
+          <td>Define el color de fondo.</td>
+          <td><code>background-color: yellow;</code></td>
+        </tr>
+        <tr>
+          <td><code>background-image</code></td>
+          <td>Define una imagen de fondo.</td>
+          <td><code>background-image: url("imagen.jpg");</code></td>
+        </tr>
+        <tr>
+          <td><code>background-repeat</code></td>
+          <td>Define cómo se repite la imagen de fondo (repeat, repeat-x, repeat-y, no-repeat).</td>
+          <td><code>background-repeat: no-repeat;</code></td>
+        </tr>
+        <tr>
+          <td><code>background-position</code></td>
+          <td>Define la posición de la imagen de fondo (top, bottom, left, right, center, etc.).</td>
+          <td><code>background-position: center;</code></td>
+        </tr>
+        <tr>
+          <td><code>background-size</code></td>
+          <td>Define el tamaño de la imagen de fondo (cover, contain, auto, etc.).</td>
+          <td><code>background-size: cover;</code></td>
+        </tr>
+        <tr>
+          <td><code>background-attachment</code></td>
+          <td>Define si la imagen de fondo se desplaza con el contenido (scroll, fixed).</td>
+          <td><code>background-attachment: fixed;</code></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="ejemplo">
+      <h3>Ejemplo de propiedades de fondo</h3>
+      <div style="background-color: lightblue; background-image: url('https://via.placeholder.com/150'); background-repeat: repeat-x; background-position: top left; background-size: 100px 50px; background-attachment: fixed; height: 200px;">
+        Este div tiene una imagen de fondo que se repite solo en el eje x, se coloca en la esquina superior izquierda, tiene un tamaño de 100px por 50px y está fija en la pantalla.
+      </div>
+    </div>
+  </section>
+
+  <section id="bordes">
+    <h2>Propiedades de bordes</h2>
+    <p>CSS permite controlar la apariencia de los bordes de los elementos:</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Propiedad</th>
+          <th>Descripción</th>
+          <th>Ejemplo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>border-width</code></td>
+          <td>Define el grosor del borde.</td>
+          <td><code>border-width: 2px;</code></td>
+        </tr>
+        <tr>
+          <td><code>border-style</code></td>
+          <td>Define el estilo del borde (solid, dashed, dotted, etc.).</td>
+          <td><code>border-style: dashed;</code></td>
+        </tr>
+        <tr>
+          <td><code>border-color</code></td>
+          <td>Define el color del borde.</td>
+          <td><code>border-color: green;</code></td>
+        </tr>
+        <tr>
+          <td><code>border-radius</code></td>
+          <td>Define el radio de las esquinas del borde.</td>
+          <td><code>border-radius: 5px;</code></td>
+        </tr>
+        <tr>
+          <td><code>border</code></td>
+          <td>Propiedad abreviada para definir grosor, estilo y color del borde.</td>
+          <td><code>border: 2px solid red;</code></td>
+        </tr>
+        <tr>
+          <td><code>border-top</code>, <code>border-right</code>, <code>border-bottom</code>, <code>border-left</code></td>
+          <td>Propiedades para definir los bordes de cada lado individualmente.</td>
+          <td><code>border-left: 5px solid blue;</code></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="ejemplo">
+      <h3>Ejemplo de propiedades de bordes</h3>
+      <div style="border: 5px solid red; border-radius: 10px; padding: 20px;">
+        Este div tiene un borde sólido rojo de 5px de grosor con esquinas redondeadas.
+      </div>
+    </div>
+  </section>
+
+  <section id="modelo_caja">
+    <h2>Modelo de caja</h2>
+    <p>Cada elemento HTML se representa como una caja rectangular. El modelo de caja define las siguientes partes:</p>
+    <ul>
+      <li><strong>Contenido:</strong> El contenido real del elemento (texto, imágenes, etc.).</li>
+      <li><strong>Padding:</strong> El espacio entre el contenido y el borde.</li>
+      <li><strong>Borde:</strong> El borde que rodea el padding y el contenido.</li>
+      <li><strong>Margen:</strong> El espacio entre el borde y los elementos adyacentes.</li>
+    </ul>
+    <p><strong>Propiedades:</strong></p>
+    <ul>
+      <li><code>width</code> y <code>height</code>: Definen el ancho y alto del contenido.<br>
+        <code>div { width: 200px; height: 100px; }</code></li>
+      <li><code>padding</code>: Define el padding.<br>
+        <code>p { padding: 20px; }</code></li>
+      <li><code>margin</code>: Define el margen.<br>
+        <code>h1 { margin: 30px; }</code></li>
+      <li><code>box-sizing</code>: Define cómo se calcula el ancho y alto total del elemento (content-box o border-box).<br>
+        <code>* { box-sizing: border-box; }</code></li>
+    </ul>
+    <div class="ejemplo">
+      <h3>Ejemplo de modelo de caja</h3>
+      <div style="width: 200px; height: 100px; padding: 20px; margin: 30px; border: 5px solid black; box-sizing: content-box;">
+        Este div tiene un ancho de 200px, un alto de 100px, un padding de 20px, un margen de 30px y un borde negro sólido de 5px. El box-sizing está configurado como content-box.
+      </div>
+    </div>
+  </section>
+
+  <section id="display">
+    <h2>Display</h2>
+    <p>La propiedad <code>display</code> controla cómo se comporta un elemento en el diseño de la página.</p>
+    <h3>Valores comunes:</h3>
+    <ul>
+      <li><code>block</code>: El elemento ocupa todo el ancho disponible y comienza en una nueva línea.<br>
+        <code>div { display: block; }</code></li>
+      <li><code>inline</code>: El elemento solo ocupa el espacio necesario y no comienza en una nueva línea.<br>
+        <code>span { display: inline; }</code></li>
+      <li><code>inline-block</code>: El elemento se comporta como inline, pero puede tener ancho y alto definidos.<br>
+        <code>button { display: inline-block; }</code></li>
+      <li><code>none</code>: El elemento no se muestra en la página.<br>
+        <code>.hidden { display: none; }</code></li>
+      <li><code>flex</code>: El elemento se convierte en un contenedor flex.<br>
+        <code>.container { display: flex; }</code></li>
+      <li><code>grid</code>: El elemento se convierte en un contenedor grid.<br>
+        <code>.grid { display: grid; }</code></li>
+      <li><code>table</code>, <code>table-row</code>, <code>table-cell</code>: El elemento se comporta como una tabla, fila o celda de tabla.<br>
+        <code>div { display: table; }</code></li>
+    </ul>
+    <div class="ejemplo">
+      <h3>Ejemplo de display</h3>
+      <div style="display: inline-block; width: 100px; height: 100px; background-color: lightgreen;">inline-block</div>
+      <div style="display: inline-block; width: 100px; height: 100px; background-color: lightcoral;">inline-block</div>
+    </div>
+  </section>
+
+  <section id="posicionamiento">
+    <h2>Posicionamiento</h2>
+    <p>La propiedad <code>position</code> controla cómo se posiciona un elemento en la página.</p>
+    <h3>Valores comunes:</h3>
+    <ul>
+      <li><code>static</code>: Posicionamiento por defecto. El elemento se coloca en el flujo normal del documento.</li>
+      <li><code>relative</code>: El elemento se posiciona en relación a su posición normal en el flujo del documento.<br>
+        <code>.box { position: relative; top: 20px; left: 30px; }</code></li>
+      <li><code>absolute</code>: El elemento se posiciona en relación a su ancestro posicionado más cercano. Si no hay ninguno, se posiciona en relación al documento.<br>
+        <code>.modal { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }</code></li>
+      <li><code>fixed</code>: El elemento se posiciona en relación a la ventana gráfica. Permanece en la misma posición aunque se desplace la página.<br>
+        <code>.fixed-header { position: fixed; top: 0; left: 0; width: 100%; }</code></li>
+      <li><code>sticky</code>: El elemento se comporta como <code>relative</code> hasta que alcanza un cierto umbral, entonces se comporta como <code>fixed</code>.<br>
+        <code>.sticky-nav { position: sticky; top: 0; }</code></li>
+    </ul>
+    <p><strong>Propiedades relacionadas:</strong></p>
+    <ul>
+      <li><code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code>: Definen la posición del elemento en relación a su contenedor.</li>
+      <li><code>z-index</code>: Define el orden de apilamiento de los elementos. Un valor más alto se muestra encima de los elementos con valores más bajos.<br>
+        <code>.top-layer { z-index: 10; }</code></li>
+    </ul>
+    <div class="ejemplo">
+      <h3>Ejemplo de posicionamiento</h3>
+      <div style="position: relative; width: 200px; height: 200px; background-color: lightgrey;">
+        <div style="position: absolute; top: 20px; left: 30px; width: 50px; height: 50px; background-color: lightblue;">absolute</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="float">
+    <h2>Float</h2>
+    <p>La propiedad <code>float</code> permite que un elemento flote a la izquierda o derecha de su contenedor, permitiendo que otros elementos lo rodeen.</p>
+    <h3>Valores comunes:</h3>
+    <ul>
+      <li><code>left</code>: El elemento flota a la izquierda.<br>
+        <code>img { float: left; margin-right: 10px; }</code></li>
+      <li><code>right</code>: El elemento flota a la derecha.<br>
+        <code>.sidebar { float: right; width: 30%; }</code></li>
+      <li><code>none</code>: El elemento no flota.</li>
+    </ul>
+    <p><strong>Para evitar que un elemento sea rodeado por elementos flotantes, se puede utilizar la propiedad <code>clear</code>:</strong></p>
+    <ul>
+      <li><code>left</code>: Evita que elementos flotantes a la izquierda lo rodeen.</li>
+      <li><code>right</code>: Evita que elementos flotantes a la derecha lo rodeen.</li>
+      <li><code>both</code>: Evita que elementos flotantes a ambos lados lo rodeen.<br>
+        <code>.clear { clear: both; }</code></li>
+    </ul>
+    <div class="ejemplo">
+      <h3>Ejemplo de float</h3>
+      <img src="https://via.placeholder.com/150" alt="Imagen" style="float: left; margin-right: 10px;">
+      <p>Este texto rodea la imagen flotante a la izquierda.</p>
+    </div>
+  </section>
+
+  <section id="flexbox">
+    <h2>Flexbox</h2>
+    <p>Flexbox es un módulo de CSS que proporciona una forma flexible de diseñar elementos en una dimensión (horizontal o vertical).</p>
+    <h3>Propiedades del contenedor flex:</h3>
+    <ul>
+      <li><code>display: flex;</code>: Convierte el elemento en un contenedor flex.</li>
+      <li><code>flex-direction</code>: Define la dirección de los elementos flex (row, column, row-reverse, column-reverse).<br>
+        <code>.container { flex-direction: column; }</code></li>
+      <li><code>justify-content</code>: Define la alineación de los elementos flex en el eje principal (flex-start, flex-end, center, space-between, space-around).<br>
+        <code>.container { justify-content: center; }</code></li>
+      <li><code>align-items</code>: Define la alineación de los elementos flex en el eje transversal (flex-start, flex-end, center, stretch, baseline).<br>
+        <code>.container { align-items: center; }</code></li>
+      <li><code>flex-wrap</code>: Define si los elementos flex deben ajustarse a una sola línea o no (nowrap, wrap, wrap-reverse).<br>
+        <code>.container { flex-wrap: wrap; }</code></li>
+    </ul>
+    <h3>Propiedades de los elementos flex:</h3>
+    <ul>
+      <li><code>order</code>: Define el orden de los elementos flex.<br>
+        <code>.item-2 { order: 1; }</code></li>
+      <li><code>flex-grow</code>: Define cuánto espacio debe ocupar un elemento flex en relación a los demás.<br>
+        <code>.item-1 { flex-grow: 2; }</code></li>
+      <li><code>flex-shrink</code>: Define cuánto debe encogerse un elemento flex en relación a los demás.<br>
+        <code>.item-3 { flex-shrink: 0; }</code></li>
+      <li><code>flex-basis</code>: Define el tamaño inicial de un elemento flex.<br>
+        <code>.item-2 { flex-basis: 150px; }</code></li>
+      <li><code>align-self</code>: Permite anular la alineación definida por <code>align-items</code> para un elemento flex específico.<br>
+        <code>.item-3 { align-self: flex-end; }</code></li>
+    </ul>
+    <div class="ejemplo">
+      <h3>Ejemplo de flexbox</h3>
+      <div style="display: flex; justify-content: space-around; align-items: center; height: 100px; border: 1px solid #ddd;">
+        <div style="width: 50px; height: 50px; background-color: lightblue;"></div>
+        <div style="width: 50px; height: 50px; background-color: lightcoral;"></div>
+        <div style="width: 50px; height: 50px; background-color: lightgreen;"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="grid">
+    <h2>Grid</h2>
+    <p>Grid es un módulo de CSS que proporciona una forma de diseñar elementos en dos dimensiones (filas y columnas).</p>
+    <h3>Propiedades del contenedor grid:</h3>
+    <ul>
+      <li><code>display: grid;</code>: Convierte el elemento en un contenedor grid.</li>
+      <li><code>grid-template-columns</code>: Define las columnas del grid.<br>
+        <code>.grid { grid-template-columns: 1fr 2fr 1fr; }</code></li>
+      <li><code>grid-template-rows</code>: Define las filas del grid.<br>
+        <code>.grid { grid-template-rows: 100px 200px; }</code></li>
+      <li><code>grid-gap</code>: Define el espacio entre las filas y columnas.<br>
+        <code>.grid { grid-gap: 10px; }</code></li>
+      <li><code>justify-content</code>: Define la alineación de la grid en el eje horizontal.<br>
+        <code>.grid { justify-content: center; }</code></li>
+      <li><code>align-content</code>: Define la alineación de la grid en el eje vertical.<br>
+        <code>.grid { align-content: space-around; }</code></li>
+    </ul>
+    <h3>Propiedades de los elementos grid:</h3>
+    <ul>
+      <li><code>grid-column-start</code>, <code>grid-column-end</code>: Definen la posición de un elemento en las columnas.<br>
+        <code>.item-1 { grid-column-start: 1; grid-column-end: 3; }</code></li>
+      <li><code>grid-row-start</code>, <code>grid-row-end</code>: Definen la posición de un elemento en las filas.<br>
+        <code>.item-2 { grid-row-start: 2; grid-row-end: 4; }</code></li>
+    </ul>
+    <div class="ejemplo">
+      <h3>Ejemplo de grid</h3>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); grid-gap: 10px;">
+        <div style="background-color: lightblue;">1</div>
+        <div style="background-color: lightcoral;">2</div>
+        <div style="background-color: lightgreen;">3</div>
+        <div style="background-color: lightpink;">4</div>
+        <div style="background-color: lightyellow;">5</div>
+        <div style="background-color: lightcyan;">6</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="media_queries">
+    <h2>Media Queries</h2>
+    <p>Las Media Queries permiten aplicar diferentes estilos CSS en función de las características del dispositivo (ancho de pantalla, orientación, etc.).</p>
+    <p><strong>Sintaxis:</strong></p>
+    <code>
+      @media (condición) {<br>
+      &nbsp;&nbsp;/* Reglas CSS */<br>
+      }
+    </code>
+    <p><strong>Ejemplos de condiciones:</strong></p>
+    <ul>
+      <li><code>(max-width: 768px)</code>: Se aplica cuando el ancho de pantalla es menor o igual a 768px.</li>
+      <li><code>(orientation: landscape)</code>: Se aplica cuando la orientación del dispositivo es horizontal.</li>
+      <li><code>(min-resolution: 2dppx)</code>: Se aplica cuando la resolución del dispositivo es al menos 2 puntos por píxel.</li>
+    </ul>
+    <p><strong>Ejemplo:</strong></p>
+    <code>
+      @media (max-width: 768px) {<br>
+      &nbsp;&nbsp;.sidebar {<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;display: none;<br>
+      &nbsp;&nbsp;}<br}
+    </code>
+  </section>
+
+  <section id="animaciones">
+    <h2>Animaciones</h2>
+    <p>CSS permite crear animaciones mediante la propiedad <code>animation</code>.</p>
+    <p>Primero, se define una animación con <code>@keyframes</code>:</p>
+    <code>
+      @keyframes miAnimacion {<br>
+      &nbsp;&nbsp;from {<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;background-color: red;<br>
+      &nbsp;&nbsp;}<br>
+      &nbsp;&nbsp;to {<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;background-color: blue;<br>
+      &nbsp;&nbsp;}<br>
+      }
+    </code>
+    <p>Luego, se aplica la animación a un elemento:</p>
+    <code>
+      .box {<br>
+      &nbsp;&nbsp;width: 100px;<br>
+      &nbsp;&nbsp;height: 100px;<br>
+      &nbsp;&nbsp;background-color: red;<br>
+      &nbsp;&nbsp;animation-name: miAnimacion;<br>
+      &nbsp;&nbsp;animation-duration: 5s;<br>
+      }
+    </code>
+    <p><strong>Propiedades de animación:</strong></p>
+    <ul>
+      <li><code>animation-name</code>: Nombre de la animación.</li>
+      <li><code>animation-duration</code>: Duración de la animación.</li>
+      <li><code>animation-timing-function</code>: Función de temporización (ease, linear, ease-in, ease-out, ease-in-out).</li>
+      <li><code>animation-delay</code>: Retraso antes de iniciar la animación.</li>
+      <li><code>animation-iteration-count</code>: Número de veces que se repite la animación (infinite para repetir indefinidamente).</li>
+      <li><code>animation-direction</code>: Dirección de la animación (normal, reverse, alternate, alternate-reverse).</li>
+      <li><code>animation-fill-mode</code>: Define qué valores se aplican antes y después de la animación (none, forwards, backwards, both).</li>
+      <li><code>animation-play-state</code>: Estado de la animación (running, paused).</li>
+      <li><code>animation</code>: Propiedad abreviada para definir todas las propiedades de animación.</li>
+    </ul>
+    <div class="ejemplo">
+      <h3>Ejemplo de animación</h3>
+      <div style="width: 100px; height: 100px; background-color: red; animation: miAnimacion 5s linear infinite alternate;">
+      </div>
+    </div>
+  </section>
+
+  <section id="transiciones">
+    <h2>Transiciones</h2>
+    <p>Las transiciones permiten animar cambios en las propiedades de un elemento de forma suave.</p>
+    <p><strong>Ejemplo:</strong></p>
+    <code>
+      .box {<br>
+      &nbsp;&nbsp;width: 100px;<br>
+      &nbsp;&nbsp;height: 100px;<br>
+      &nbsp;&nbsp;background-color: red;<br>
+      &nbsp;&nbsp;transition: background-color 2s ease;<br>
+      }<br>
+      .box:hover {<br>
+      &nbsp;&nbsp;background-color: blue;<br>
+      }
+    </code>
+    <p><strong>Propiedades de transición:</strong></p>
+    <ul>
+      <li><code>transition-property</code>: Propiedad que se animará.</li>
+      <li><code>transition-duration</code>: Duración de la transición.</li>
+      <li><code>transition-timing-function</code>: Función de temporización.</li>
+      <li><code>transition-delay</code>: Retraso antes de iniciar la transición.</li>
+      <li><code>transition</code>: Propiedad abreviada para definir todas las propiedades de transición.</li>
+    </ul>
+    <div class="ejemplo">
+      <h3>Ejemplo de transición</h3>
+      <div style="width: 100px; height: 100px; background-color: red; transition: background-color 2s ease;" class="box"></div>
+    </div>
+  </section>
+
+<section id="transformaciones">
+    <h2>Transformaciones</h2>
+    <p>Las transformaciones permiten modificar la forma y posición de un elemento.</p>
+    <p><strong>Funciones de transformación:</strong></p>
+    <ul>
+      <li><code>translate(x, y)</code>: Mueve el elemento en el eje x e y.</li>
+      <li><code>rotate(ángulo)</code>: Rota el elemento.</li>
+      <li><code>scale(x, y)</code>: Escala el elemento en el eje x e y.</li>
+      <li><code>skew(x-ángulo, y-ángulo)</code>: Inclina el elemento en el eje x e y.</li>
+      <li><code>matrix(a, b, c, d, e, f)</code>: Define una transformación matricial.</li>
+    </ul>
+    <p><strong>Ejemplo:</strong></p>
+    <code>
+      .box {<br>
+      &nbsp;&nbsp;width: 100px;<br>
+      &nbsp;&nbsp;height: 100px;<br>
+      &nbsp;&nbsp;background-color: red;<br>
+      &nbsp;&nbsp;transform: rotate(45deg);<br>
+      }
+    </code>
+    <div class="ejemplo">
+      <h3>Ejemplo de transformación</h3>
+      <div style="width: 100px; height: 100px; background-color: red; transform: rotate(45deg) scale(0.8);"></div>
+    </div>
+  </section>
+
+</body>
+</html>
