@@ -1,0 +1,171 @@
+*{
+	margin: 0 auto;
+}
+
+body{
+	font-family: Cambria, Arial, Times;
+	font-size: 12pt;
+	width: 800px;
+}
+
+header{
+	width: 802px;
+	background-color: #512504;
+	color: #f6b971;
+	padding: 4px; 
+	margin-bottom: 4px;
+	border: 1px;
+	
+	border-radius: 4px;
+}
+
+article header{
+	width: 542px;
+}
+
+section {
+	width: 550px;
+	margin-right: 20px;
+	float: left;
+}
+
+section article{
+	width: 550px;
+	float: left;
+	border: 1px solid #984a0b;
+	background-color: #f0d4b0;
+	margin-bottom: 4px;
+	margin-top: 4px;
+	padding: 4px;
+}
+
+.minimarco{
+	background-color:#eeeeee;
+	border: 1px solid #512504;
+	color: #512504;
+	padding: 4px;
+}
+
+aside{
+	width: 230px;
+	float: left;
+}
+
+aside blockquote{
+	border: 1px solid #984a0b;
+	margin-bottom: 10px;
+	margin-top: 4px;
+	background-color: #f0d4b0;
+	padding: 4px;
+}
+
+footer{
+	width: 802px;
+	padding: 4px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	background-color: #000000;
+	color:#ffffff;
+	clear:both;
+}
+
+article footer{
+	background-color: #512504;
+	color:#ffffff;
+	width: 542px;
+	padding: 4px;
+}
+
+section.interior{
+	width: 800px;
+	float: left;
+}
+
+/*SIn el section tb funciona, repasamos herencia */
+section.interior article{
+	width: 800px;
+	float:left;
+	border: 1px solid #984a0b;
+	margin-bottom: 4px;
+	margin-top: 4px;
+	background-color:#f0d4b0;
+	padding : 4px;
+}
+
+.imagen-noticias{
+	width: 600px;
+	margin: 10px;
+	border: 1px solid #984a0b;
+	padding: 4px;
+}
+
+/*Para las lineas de la tabla*/
+
+.tabla th, .tabla td{
+	border: 1px solid #984a0b;
+}
+
+.fondoblanco{
+	background-color: #ffffff;
+}
+
+nav ul{
+	list-style: none;
+	text-align: center; 
+	padding: 0;
+}
+
+nav ul li{
+	/*CAda elemento lo considera como bloque */
+	display: block;
+	float: left;
+	
+	padding: 6px 10px;
+	margin: 4px;
+	margin-bottom: 8px;
+	border: 1.5px solid #984a0b;
+	
+	transition: 0.3s;
+	
+}
+
+nav ul li a {
+	text-decoration: none; 
+	font-family: Arial;
+	font-weight: bold; 
+	text-transform: uppercase; 
+	color: #984a0b;
+	padding: 4px;
+	
+	
+}
+
+nav ul li:hover{
+	color: white; 
+	background-color: black;
+}
+
+h1{ font-size: 1.4em;}
+h2{ font-size: 1.2em;}
+
+figcaption{
+	font-size: 0.8em;
+	font-style: italic;
+	color: #984a0b;
+}
+
+#bloque1{
+	width: 358px; 
+	border: 1px solid #984a0b;
+	margin: 10px;
+	padding: 10px;
+	float: left;
+}
+
+#bloque2{
+	width: 358px;
+	border: 1px solid #984a0b;
+	margin: 10px;
+	padding: 10px;
+	float: left;
+}
