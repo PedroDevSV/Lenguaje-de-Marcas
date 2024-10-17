@@ -1,17 +1,16 @@
-/* PARA CENTRAR SIEMPRE */
-*{
+* {
     /* 0 top y botton, auto izq derecha */
     margin: 0 auto;
 }
 
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
     width: 900px;
     font-size: 11pt;
     background-color: #6d6b6b;
 }
 
-h1{
+h1 {
     font-size: 1.6em;
     color: rgb(36, 197, 116);
 }
@@ -20,35 +19,39 @@ h2 {
     font-size: 1.2em;
     color: rgb(118, 197, 107);
 }
-nav{
+
+nav {
     float: left;
     width: 900px;
     background-color: #2c2c2c;
 }
-nav ul{
+
+nav ul {
     width: 50%;
     display: flex;
     float: left;
     padding: 4px;
     list-style: none;
-    
+
 }
-nav ul li{
+
+nav ul li {
     background-color: black;
     color: green;
     transition: 0.3s;
     padding: 8px;
 }
+
 nav ul li a {
     text-decoration: none;
     color: rgb(76, 245, 54);
 }
 
-nav ul li:hover{
+nav ul li:hover {
     background-color: rgb(144, 144, 144);
 }
 
-header{
+header {
     width: 100%;
     text-align: center;
     line-height: 2em;
@@ -57,54 +60,18 @@ header{
 }
 
 section{
-    width: 680px;
-    margin-right: 20px;
-    float: left;
-}
-
-section article{
-    width: 675px;
-    background-color: rgb(226, 238, 226);
-    color: rgb(0, 0, 0);
-    border: 1px solid rgb(0, 0, 0);
-    padding: 11px;
-    margin: 4px 0px;
-    font-weight: 500;
-}
-
-article header{
-    text-align: left;
-    width: 672px;
-    padding: 4px;
-    letter-spacing: 0px;
-    
-}
-
-section article figure{
-    float: left;
-    margin: 10px 10px 0px 0px;
+    width: 900px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
 }
 
 figcaption{
-    margin: 1px;
+    padding: 5px;
+    color: rgb(55, 226, 55);
+    text-align: center;
 }
 
-p{
-    margin: 10px 5px;
-}
-
-aside{
-    margin-top: 5px;
-    margin-left: 5px;
-    padding: 6px;
-    float: left;
-    width: 180px;
-    background-color: rgb(226, 238, 226);
-
-}
-
-footer{
-    float: left;
-    clear: both;
-    color: rgb(76, 245, 54);
+.logo{
+    display: flex;
+    margin-bottom: 10px;
 }
