@@ -6,6 +6,23 @@ body{
    
 }
 
+article{
+    
+    display: flex;
+    flex-direction: row;
+    /* wrap permite que se coloque como necesite dependiendo del ancho */
+    flex-wrap: wrap;
+    /* justify centra horizontarlmente */
+    /* space evenly aplica mismo espacio disponible para los elementos */
+    justify-content: space-evenly;
+
+    /* eje vertical  */
+    /* align-items:center; */
+
+    border: 1px solid black;
+    padding: 5px;
+}
+
 .nombrecorto{
     font-size: 1.5em;
     font-weight: bold;
@@ -17,25 +34,19 @@ body{
 }
 
 .caja, .caja2{
-    float: left;
     width: 200px;
     border: 1px solid black;
     padding: 10px;
     margin: 10px;
 }
 
-.caja2{
-    /* caja2 no admite flotante a la izq */
-    clear: left;
-}
-
-.profesor1{
+.caja{
     background-color: blue;
     color: white;
     border-color: red;
 }
 
-.profesor2{
+.caja2{
     background-color: green;
     color: white;
     border-color: rgb(43, 226, 195);
