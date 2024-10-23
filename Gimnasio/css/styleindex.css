@@ -1,0 +1,187 @@
+*{
+	margin:0 auto;
+}
+
+body {
+	font-family: Arial, Helvética, Verdana;
+	font-size:11pt;
+	width:920px;
+	
+	
+}
+
+h1{
+	background-color:black;
+	color:white;
+	
+	
+	
+}
+
+h2{
+	padding:4px;
+	font-size:1.2em;
+}
+.equipos{
+	font-size:1.4em;
+}
+
+
+
+
+header{
+	
+	margin:4px;
+}
+
+header figure{
+	border:1px solid black;
+	padding:5px;
+}
+
+nav{
+	width:920px;
+	margin-bottom:4px;
+	background-color:white;
+		
+}
+
+nav ul{
+	list-style:none;
+	
+}
+
+nav ul li{
+	display:block;
+	float:left;
+	padding:8px;
+	background-color:#333333;
+	margin:6px;
+	text-transform:uppercase;
+
+}
+
+nav ul li a{
+	text-decoration:none;
+	color:white;
+	font-weight:bold;
+	padding:10px;
+	
+}
+
+nav ul li:hover{
+	background-color:#564e49;	
+}
+
+
+section{
+	width:600px;
+	float:left;
+}
+
+section article{
+	width:600px;
+	background-color:#eaeaea;
+	margin-bottom:8px;
+	margin-top:4px;
+	float:left;
+	
+	
+}
+
+section article header{
+	width:596px;
+}
+
+.imagen{
+	float:right;
+	border:1px solid black;
+	padding:4px;
+}
+
+article figure figcaption{
+	font-size:0.8em;
+	padding:4px;
+}
+
+.recuadro{
+	background-color:black;
+	color:white;
+	padding:10px;
+	margin-left:16px;
+	float:left;
+	width:280px;
+	border-radius:0px 10px;
+	
+	
+}
+
+footer{
+	clear:both;
+	background-color:black;
+	color:white;
+	padding:6px;
+	text-align:center;
+	width:100%;
+}
+
+.guiado{
+	background-color:#999999;
+	color:white;
+}
+
+table{
+	width:890px;
+	
+	
+}
+
+table th{
+	background-color:#999999;
+}
+
+table td{
+	background-color:#666666;
+	padding:10px;
+	color:white;
+	
+}
+
+.tipos{
+	background-color:#666666;
+	color:white;
+	padding:10px;
+}
+
+.section920{
+	width:920px;
+}
+
+.espacios{
+	border:1px solid black;
+	padding:4px;
+	float:left;
+	width:416px;
+	margin:10px;
+}
+
+
+.espacios header{
+	background-color:black;
+	color:white;
+	width:95%;
+}
+
+.imagengaleria{
+	width: 200px;
+	margin:14px;
+	float:left;
+}
+
+.imagengaleria:hover{
+	-moz-transform:translateX(100px)translateY(-100px) scaleX(3.0) scaleY(3.0);
+	-webkit-transform:translateX(100px)translateY(-100px) scaleX(3.0) scaleY(3.0);
+	-moz-transition: -moz-transform 1s ease-in-out;
+	-webkit-transition: -webkit-transform 1s ease-in-out;
+}
+
