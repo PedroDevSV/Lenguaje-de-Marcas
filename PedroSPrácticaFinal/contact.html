@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" >
 		<title>Horario</title>
 		<link rel="stylesheet"href="http://fonts.googleapis.com/css?family=Open+Sans">
-		<link rel="stylesheet" href="styles/contact.css" />
+		<link rel="stylesheet" href="styles.css" />
 	</head>
 	<body>
 		<header>
@@ -20,30 +20,30 @@
 				<li><a href="contact.html">CONTACTO</a></li>
 			</ul>
 		</nav>
+		<section>
+			<article>
+				<header class="contactHeader">
+					<p>Envíanos tus dudas, comentarios o sugerencias</p>
+				</header>
+				<form>
+					<label for="correo">Correo electrónico:</label>
+					<input type="email" id="correo" />
+					<label for="mensaje">Comentarios:</label>
+					<textarea id="mensaje"></textarea>
+					<input type="submit" value="Enviar" id="enviar" />
+				</form>
+			</article>
+		</section>
 
-		<article>
-			<header>
-				<p>Envíanos tus dudas, comentarios o sugerencias</p>
-			</header>
-			<form>
-				<label for="correo">Correo electrónico:</label>
-				<input type="email" id="correo" />
-				<label for="mensaje">Comentarios:</label>
-				<textarea id="mensaje"></textarea>
-				<input type="submit" value="Enviar" id="enviar" />
-			</form>
-		</article>
-
-		<aside>
-			<p>Ctra Mula 37 - Alguanzas(Murcia)</p>
-			<p>968 629 | 668 620 913</p>
-			<p>bicicletas@ces-vegamedia.es</p>
-			<figure>
-				<img src="images/facebook_logo.png" alt="">
+			<aside class="asideContact">
+				<p>Ctra Mula 37 - Alguanzas(Murcia)</p>
+				<p>968 629 | 668 620 913</p>
+				<p>bicicletas@ces-vegamedia.es</p>
+				<figure class="logos">
+				<img class="contactImage" src="images/facebook_logo.png" alt="">
 				<img src="images/twitter_logo.png" alt="">
-			</figure>
-		</aside>
-
+				</figure>
+			</aside>
 		<footer>
 			<p>Todos los derechos reservados &copy; Bicicletas Vega Media</p>
 		</footer>
