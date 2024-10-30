@@ -1,0 +1,91 @@
+*{
+    margin: 0 auto;
+}
+
+body{
+    width: 920px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    color: black;
+}
+header{
+    width: 100%;
+}
+
+header h1{
+    background-color: black;
+    color: white;
+    padding: 5px;
+    font-size: 18pt;
+}
+
+h2{
+    color: rgb(68, 68, 68);
+}
+
+
+
+figure{
+    border: 1px solid black;
+    padding: 5px;
+}
+
+nav{
+    margin-top: 10px;
+    width: 920px;
+    float: left;
+}
+
+nav ul{
+    list-style: none;
+}
+
+nav ul li{
+    display: block;
+    float: left;
+    padding: 15px;
+    margin-left: 10px;
+    background-color: black;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+section {
+    width: 600px;
+    float: left;
+}
+
+section article{
+    width: 590px;
+    background-color: rgb(189, 189, 189);
+    float: left;
+    padding: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+article figure{
+    float: right;
+}
+
+aside{
+    width: 250px;
+    float: left;
+    margin-left: 20px;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 0px 20px;
+}
+footer{
+    width: 912px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    background-color: black;
+    clear: both;
+    text-align: center;
+    padding: 10px;
+}
