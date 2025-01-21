@@ -1,0 +1,9 @@
+<documento>
+    <titulo>Prueba</titulo>
+    <ejemplo>
+        <!-- con Cdata no procesa el contenido, como el code en html -->
+        <![CDATA[
+            EN hTML la negrita se escribe : <strong>
+        ]]>
+    </ejemplo>
+</documento>
