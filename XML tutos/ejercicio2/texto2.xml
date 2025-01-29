@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<liga>
+    <equipo>
+        <nombre>Sporting de Gijon</nombre>
+        <ciudad>Gijon</ciudad>
+        <entrenador/>
+        <jugador>
+            <nombre>Amador</nombre>
+            <posicion>Delantero pichichi</posicion>
+            <nacionalidad> Albaceteña</nacionalidad>
+        </jugador>
+         <jugador>
+            <nombre>Agustin</nombre>
+            <posicion>Lateral</posicion>
+            <nacionalidad> Francesa</nacionalidad>
+        </jugador>
+    </equipo>
+
+     <equipo>
+        <nombre>Yeclano Deportivo</nombre>
+        <ciudad>Yecla</ciudad>
+        <entrenador/>
+        <jugador>
+            <nombre>Ivan Martinez</nombre>
+            <posicion>Portero</posicion>
+            <nacionalidad> Torreña</nacionalidad>
+        </jugador>
+         <jugador>
+            <nombre>Joaquin</nombre>
+            <posicion>Lateral</posicion>
+            <nacionalidad> Murciana</nacionalidad>
+        </jugador>
+    </equipo>
+</liga>

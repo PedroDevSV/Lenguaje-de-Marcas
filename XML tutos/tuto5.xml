@@ -1,0 +1,11 @@
+<mensaje>
+    <remite>
+        <nombre>Pepe</nombre>
+        <email>pepetonto@gmail.com</email>
+    </remite>
+    <destinatario>
+        <nombre>Periko</nombre>
+        <email>periko@gmail.com</email>
+    </destinatario>
+    <asunto>Buenas tardes </asunto>
+</mensaje>

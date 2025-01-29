@@ -1,0 +1,27 @@
+libro,
+autor,
+fechaPubli {
+    /* display: block; */
+    font-family: sans-serif;
+}
+biblioteca{
+    display: table;
+    margin: 10px;
+}
+libro {
+    margin-bottom: 10px;
+   
+    display: table-row;
+}
+
+titulo {
+    font-size: 1.1em;
+    font-weight: bold;
+    
+}
+
+autor,fechaPubli,titulo{
+    display: table-cell;
+    padding: 10px;
+    border: 1px solid black;
+}

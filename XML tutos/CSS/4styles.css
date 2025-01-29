@@ -1,0 +1,16 @@
+libro,autor,fechaPubli {
+    display: block;
+    font-family: sans-serif;
+}
+
+libro{
+    border: 1px solid black;
+    background-color: rgb(235, 161, 241);
+    margin: 10px;
+ 
+}
+
+titulo{
+    font-size: 1.2em;
+    font-weight: bold;
+}

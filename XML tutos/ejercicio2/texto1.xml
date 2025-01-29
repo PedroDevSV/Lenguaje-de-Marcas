@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pedido>
+    <destinatario> Antonio Martinez Conesa </destinatario>
+    <direccion>
+        <calle>Mayor</calle>
+        <numero>16</numero>
+        <piso>3</piso>
+        <letra>B</letra>
+    </direccion>
+    <paquete>Patin electrico A2020</paquete>
+    <fechaLlegada>15/01/2020</fechaLlegada>
+</pedido>

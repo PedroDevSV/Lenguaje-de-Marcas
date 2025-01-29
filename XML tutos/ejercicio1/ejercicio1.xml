@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mediosDeTransporte>
+    <bisi>
+        <velocidadMaxima>50km/h</velocidadMaxima>
+    </bisi>
+    <patin>
+         <velocidadMaxima>50km/h</velocidadMaxima>
+    </patin>
+</mediosDeTransporte>

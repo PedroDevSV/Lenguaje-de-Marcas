@@ -1,0 +1,14 @@
+libro,autor,fechaPubli{
+    display: block;
+  
+}
+
+titulo{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+fechaPubli{
+    font-style: italic;
+    border-bottom: 1px solid black;
+}
