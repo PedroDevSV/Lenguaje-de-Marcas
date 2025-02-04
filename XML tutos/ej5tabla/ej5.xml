@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<curso>
+    <nombre>DESARROLLO APLICACIONES WEB</nombre>
+    <tipo>Ciclo Formativo de Grado Superior</tipo>
+    <modulos>
+        <modulo>
+            <nombre>Entornos de Desarrollo</nombre>
+            <curso>1o</curso>
+            <horasSemanales>3</horasSemanales>
+        </modulo>
+        <modulo>
+            <nombre>Programación</nombre>
+            <curso>1o</curso>
+            <horasSemanales>7</horasSemanales>
+        </modulo>
+        <modulo>
+            <nombre>Bases de Datos</nombre>
+            <curso>1o</curso>
+            <horasSemanales>5</horasSemanales>
+        </modulo>
+        <modulo>
+            <nombre>Lenguaje de Marcas</nombre>
+            <curso>2o</curso>
+            <horasSemanales>6</horasSemanales>
+        </modulo>
+        <modulo>
+            <nombre>Diseño de Aplicaciones Web</nombre>
+            <curso>2o</curso>
+            <horasSemanales>6</horasSemanales>
+        </modulo>
+    </modulos>
+</curso>

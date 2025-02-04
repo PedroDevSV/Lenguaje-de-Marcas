@@ -15,6 +15,7 @@ titulo {
 }
 
 autor,fechaPubli{
+    
     display: list-item;
     list-style: circle inside;
     /* color: red; */
