@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE biblioteca SYSTEM "biblio4.dtd">
+<?xml-stylesheet href="4styles.css" type="text/css"?>
+<biblioteca>
+    <libro>
+        <titulo>Lagrimas en la Lluvia</titulo>
+        <autor>Rosa Monter</autor>
+         <fechaPubli>2011 </fechaPubli>
+    </libro>
+    <libro>
+        <titulo>Sin noticias de Gurb</titulo>
+        <autor fechaNacimiento="11/03/1943">EDuardo Mendoza</autor>
+        <fechaPubli>2011 </fechaPubli>
+    </libro>
+    <libro>
+        <titulo>La sombra del Águila</titulo>
+        <autor fechaNacimiento="25/11/1951">Arturo Pérez-Reverte</autor>
+        <fechaPubli>2011 </fechaPubli>
+    </libro>
+</biblioteca>
