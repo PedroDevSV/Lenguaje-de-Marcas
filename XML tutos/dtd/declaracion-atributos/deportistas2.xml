@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE deportistas [
+    <!ELEMENT deportistas (futbol | tenis | basket)*>
+    <!ELEMENT futbol (#PCDATA)>
+    <!ELEMENT tenis (#PCDATA)>
+    <!-- Varios atributos -->
+    <!ELEMENT basket (#PCDATA)>
+    <!-- implied es opcional, si pones entre comillas es valor por defecto, required requerido, fixed VALOR FIJO no se puede otro -->
+    <!-- SOlo podemos poner uno, o defecto o implied o required o fixed -->
+        <!ATTLIST basket pais CDATA "España"
+                        fechanac CDATA #IMPLIED
+                        equipo CDATA #REQUIRED
+                        color CDATA #FIXED "negro">
+]>
+<deportistas>
+    <futbol>Kasemiro</futbol>
+    <!-- si no especificamos, valor pais="España" -->
+    <basket fechanac="03-06-1994" equipo="Madrid">Ricki PUg</basket>
+    <basket pais="Murcia" equipo="Barsa">Fernando</basket>
+</deportistas> 

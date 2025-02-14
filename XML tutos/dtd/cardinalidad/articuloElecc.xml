@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE articulos [
+    <!ELEMENT articulos (articulo)*>
+    <!-- Puede tener o codigo o id, y obligado 1 nombre -->
+    <!ELEMENT articulo ((codigo | id), nombre)>
+    <!ELEMENT codigo (#PCDATA)>
+    <!ELEMENT id (#PCDATA)>
+    <!ELEMENT nombre (#PCDATA)>
+]>
+<articulos>
+    <articulo>
+        <codigo>003A</codigo>
+        <nombre>Tuerca</nombre>
+    </articulo>
+    <articulo>
+        <id>8</id>
+        <nombre>Tornillo 6</nombre>
+    </articulo>
+</articulos>

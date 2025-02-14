@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE deportistas [
+    <!ELEMENT deportistas (futbol | tenis | basket)*>
+    <!ELEMENT futbol (#PCDATA)>
+    <!ELEMENT tenis (#PCDATA)>
+    <!ELEMENT basket (#PCDATA)>
+    <!-- Tipo enumerado, puede ser uno de entre parentesis, además especifica "ESP" por defecto -->
+        <!ATTLIST basket pais (ESP | FRA | ALE) "ESP">
+]>  
+<deportistas>
+    <futbol>Kasemiro</futbol>
+    <tenis>Rafa Nadal</tenis>
+    <!-- si o si uno de entre los 3 -->
+    <basket pais="FRA">Akiero</basket>
+    <basket>Sergio Llul</basket>
+</deportistas> 

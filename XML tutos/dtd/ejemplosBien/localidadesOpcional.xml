@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE localidades [
+    <!ELEMENT localidades (localidad)*>
+    <!-- O aparece ciudad Y pais, o aparece codigo postal -->
+    <!-- RESPETAR ORDEN, primero ciudad luego pais -->
+    <!ELEMENT localidad ((ciudad, pais) | codpostal)>
+    <!ELEMENT ciudad (#PCDATA)>
+    <!ELEMENT pais (#PCDATA)>
+    <!ELEMENT codpostal (#PCDATA)>
+]>
+<localidades>
+    <localidad>
+        <ciudad>Murcia</ciudad>
+        <pais>España</pais>
+    </localidad>
+    <localidad>
+        <codpostal>30565</codpostal>
+    </localidad>
+</localidades>

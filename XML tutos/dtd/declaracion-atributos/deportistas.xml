@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE deportistas [
+    <!ELEMENT deportistas (futbol | tenis | basket)*>
+    <!ELEMENT futbol (#PCDATA)>
+    <!ELEMENT tenis (#PCDATA)>
+        <!-- si pones algo entre comillas en declaracion de atributo, es el valor por defecto (si no se inserta valor abajo, es españa) -->
+        <!ATTLIST tenis pais CDATA "España">
+    <!ELEMENT basket (#PCDATA)>
+]>
+<deportistas>
+    <futbol>Kasemiro</futbol>
+    <!-- si no especificamos, valor pais="España" -->
+    <tenis>Rafa Nadal</tenis>
+    <tenis pais="Suiza">Roger Federer</tenis>
+    <basket>Buenas</basket>
+</deportistas> 

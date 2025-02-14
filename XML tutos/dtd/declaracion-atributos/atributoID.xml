@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE deportistas [
+    <!ELEMENT deportistas (futbol | tenis | basket)*>
+    <!ELEMENT futbol (#PCDATA)>
+    <!ELEMENT tenis (#PCDATA)>
+    <!ELEMENT basket (#PCDATA)>
+   <!-- id es UNICO, solo puede haber un valor y q no se repita -->
+    <!ATTLIST basket codigo ID #REQUIRED>
+]>
+<deportistas>
+    <futbol>Kasemiro</futbol>
+    <tenis>Rafa Nadal</tenis>
+    <!-- no pueden ser numeros -->
+    <basket codigo="AK">Akiero</basket>
+    <basket codigo="SL">Sergio Llul</basket>
+</deportistas> 

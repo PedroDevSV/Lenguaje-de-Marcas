@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE articulo [
+<!-- podremos insertar o código o id (eleccion) de 0 a muchos  -->
+    <!ELEMENT articulo (codigo | id)*>
+    <!ELEMENT codigo (#PCDATA)>
+    <!ELEMENT id (#PCDATA)>
+]>
+<articulo>
+    <codigo>001A</codigo>
+    <codigo>002C</codigo>
+    <id>78</id>
+    <codigo>004A</codigo>
+</articulo>

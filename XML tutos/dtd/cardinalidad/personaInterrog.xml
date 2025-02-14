@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE persona [
+    <!ELEMENT persona (nombre,mayor_edad?)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT mayor_edad EMPTY>
+]>
+<persona>
+    <nombre>Juan Antonio</nombre>
+    <!-- Declaración de booleano, si lo ponemos es TRUE -->
+    <mayor_edad />
+</persona>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="poligono.dtd" type="application/xml-dtd"?>
+<poligono>
+    <coordX>34</coordX>
+    <coordY>33</coordY>
+    <coordX>12</coordX>
+    <coordY>77</coordY>
+</poligono>

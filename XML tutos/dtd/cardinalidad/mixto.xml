@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE articulos [
+    <!-- puede contener uno de esos 3, muchos del mismo o ninguno -->
+    <!ELEMENT articulos (#PCDATA | codigo | id)*>
+    <!ELEMENT codigo (#PCDATA)>
+    <!ELEMENT id (#PCDATA)>
+]>
+<articulos>
+    <id>33389</id>
+    Lavadora
+    <codigo>003N</codigo>
+    Microondas
+    <id>32128</id>
+    <id>22231</id>
+</articulos>

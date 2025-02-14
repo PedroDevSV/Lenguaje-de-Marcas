@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE receta_cocina [
+<!-- asterisco puede ser 0 o muchos -->
+    <!ELEMENT receta_cocina (nombre, ingrediente*)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT ingrediente (#PCDATA)>
+]>
+<receta_cocina>
+    <nombre>Tortilla de patatas</nombre>
+    <ingrediente>Huevo</ingrediente>
+    <ingrediente>Patata</ingrediente>
+    <ingrediente>Aceite</ingrediente>
+    <ingrediente>Cebolla</ingrediente>
+    <ingrediente>Sal</ingrediente>
+</receta_cocina>

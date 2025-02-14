@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ejemplo [
+    <!ELEMENT ejemplo (cualquier_contenido)>
+    <!ELEMENT cualquier_contenido ANY>
+    <!ELEMENT texto (#PCDATA)>
+]>
+<ejemplo>
+    <cualquier_contenido>
+        <texto>texto1</texto>
+        <texto>texto2</texto>
+        <texto>Texto3</texto>
+    </cualquier_contenido>
+</ejemplo>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE personas [
+<!-- el + indica mínimo 1 o más -->
+    <!ELEMENT personas (nombre+)>
+    <!ELEMENT nombre (#PCDATA)>
+]>
+<personas>
+    <nombre>Juan</nombre>
+    <nombre>Jorge</nombre>
+    <nombre>Amparo</nombre>
+</personas>

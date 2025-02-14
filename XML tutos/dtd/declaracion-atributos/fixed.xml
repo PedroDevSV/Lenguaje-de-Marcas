@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE deportistas [
+    <!ELEMENT deportistas (futbol | tenis | basket)*>
+    <!ELEMENT futbol (#PCDATA)>
+    <!ELEMENT tenis (#PCDATA)>
+    <!-- atributo fixed es VALOR FIJO, solo puede tener ese vlaor, no se puede asignar otro -->
+        <!ATTLIST tenis pais CDATA #FIXED "España">
+    <!ELEMENT basket (#PCDATA)>
+]>
+<deportistas>
+    <futbol>Kasemiro</futbol>
+    <!-- si no especificamos, valor pais="España" -->
+    <tenis>Rafa Nadal</tenis>
+    <tenis>Roger Federer</tenis>
+    <basket>Buenas</basket>
+</deportistas> 
