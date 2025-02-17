@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cine [
+    <!ELEMENT cine (peliculas, directores)>
+    <!ELEMENT peliculas (pelicula)*>
+    <!ELEMENT pelicula (#PCDATA)>
+        <!ATTLIST pelicula codpeli ID #REQUIRED>
+    <!ELEMENT directores (director)*>
+    <!ELEMENT director (#PCDATA)>
+        <!ATTLIST director filmografia IDREFS #REQUIRED>
+        <!-- tipo IDREFS,
+        lo que significa que puede contener una lista de referencias a
+        uno o más atributos de tipo ID definidos en otros elementos.
+        En este caso, 'filmografia' referenciará los 'codpeli' de los
+        elementos 'pelicula'. Esto permite establecer relaciones entre
+        directores y sus películas. --> 
+]>
+<cine>
+    <peliculas>
+        <pelicula codpeli="p1">Pelicula 1</pelicula>
+        <pelicula codpeli="p2">Pelicula 2</pelicula>
+        <pelicula codpeli="p3">Pelicula 3</pelicula>
+    </peliculas>
+    <directores>
+        <director filmografia="p2">Clint Eastwood</director>
+        <director filmografia="p1 p2 p3">James cameron</director>
+    </directores>
+</cine>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE usuarios [
+    <!ELEMENT usuarios (usuario)*>
+    <!ELEMENT usuario (#PCDATA)>
+        <!--
+        nmtoken es un tipo de dato en XML que representa una cadena de caracteres que puede ser utilizada como un nombre de token. 
+        Se utiliza comúnmente para definir identificadores válidos en documentos XML.
+        -->
+        <!ATTLIST usuario clave NMTOKENS #REQUIRED>
+]>
+<usuarios>
+    <!-- tokens puede cogeer varios, token solo es 1  no admite mas con espacios -->
+    <usuario clave="jnad12-45 asddesad">Pedro</usuario>
+    <usuario clave="ahjas-q213">Maria</usuario>
+</usuarios>
