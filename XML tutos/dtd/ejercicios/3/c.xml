@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE viajes [
+    <!ELEMENT viajes (paises, ciudades)>
+    <!ELEMENT paises (pais)*>
+    <!ELEMENT pais (#PCDATA)>
+    <!ATTLIST pais codpais ID #REQUIRED>
+    <!ELEMENT ciudades (ciudad)*>
+    <!ELEMENT ciudad (#PCDATA)>
+    <!ATTLIST ciudad pais IDREF #IMPLIED>
+]>
+<viajes>
+    <paises>
+        <pais codpais="E1">España</pais>
+        <pais codpais="F2">Francia</pais>
+        <pais codpais="I3">Italia</pais>
+        <pais codpais="D4">Dinamarca</pais>
+    </paises>
+    <ciudades>
+        <ciudad pais="I3">Roma</ciudad>
+        <ciudad>Copenhague</ciudad>
+        <ciudad pais="E1">Sevilla</ciudad>
+        <ciudad pais="I3">Florencia</ciudad>
+        <ciudad pais="F2">Marsella</ciudad>
+    </ciudades>
+</viajes>

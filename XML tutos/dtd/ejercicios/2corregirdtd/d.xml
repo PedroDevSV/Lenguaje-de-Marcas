@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE usuarios [
+    <!ELEMENT usuarios (usuario)*>
+    <!ELEMENT usuario ((numero | clave)?, nombre, edad?)>
+    <!ELEMENT clave (#PCDATA)>
+    <!ELEMENT edad (#PCDATA)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT numero (#PCDATA)>
+]>
+<usuarios>
+    <usuario>
+        <nombre>Juan</nombre>
+        <edad>23</edad>
+    </usuario>
+    <usuario>
+        <numero>295</numero>
+        <nombre>Amparo</nombre>
+        <edad>19</edad>
+    </usuario>
+    <usuario>
+        <clave>yHdBc4</clave>
+        <nombre>Alfonso</nombre>
+    </usuario>
+</usuarios>

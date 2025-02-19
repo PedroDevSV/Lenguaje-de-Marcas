@@ -1,0 +1,2 @@
+-- CDATA contiene cualquier tipo de cadena de texto, puede empezar por NUMEROS 
+-- ID nunca v a empezar por numero, a parte es unico. Un elemento solo tiene un ID.

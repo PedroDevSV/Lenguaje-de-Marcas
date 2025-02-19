@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE articulos [
+
+    <!ELEMENT articulos (articulo)+>
+    <!ELEMENT articulo (#PCDATA)>
+    <!-- FIXED es siempre mismo valor, no cambia -->
+        <!ATTLIST articulo color CDATA #FIXED "azul">
+]>
+<articulos>
+<!-- aunque no pongas atribnuto, va a tener valor azul -->
+    <articulo  color="azul" />
+    <articulo  />
+    <articulo color="azul" />
+</articulos>
