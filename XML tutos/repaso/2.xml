@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pedido>
+    <destinatario>Juan nana    </destinatario>
+    <articulo>Patinetene A2020</articulo>
+    <direccion>
+        <calle>Mayor</calle>
+        <numero>16</numero>
+        <piso>3</piso>
+        <puerta letra="B"/>
+    </direccion>
+    <fechaEntrega> 15/01/2020
+    </fechaEntrega>
+</pedido>
+
+<equiposFutbol>
+    <equipo>
+        <nombre>
+        <ciudad>
+        <entrenador/>
+        <jugadores>
+            <jugador posicion="">
+                <nombre>
+                <nacionalidad>
+            </jugador>
+            x2 
+        </jugadores>
+    </equipo>
+    <equipo>
+
+    </equipo>
+</equiposFutbol>
+
+
+<mensaje>
+    <destinatario>
+        <nombre>
+        <email>
+    </destinatario>
+    <remitente>
+        <nombre>
+        <email>
+    </remitente>
+    <asunto></asunto>
+    <texto>
+        <parrafo>
+        <parrafo>
+    </texto>
+</mensaje>
+
+<DAW>
+    <nombreCIclo>
+    <tipo>
+    <modulos>
+        <modulo nombre="Entornos">
+            <curso>
+            <horas>
+        </modulo>
+    </modulos>
+<DAW>

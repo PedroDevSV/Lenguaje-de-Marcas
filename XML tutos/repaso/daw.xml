@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="styles.css" type="text/css"?>
+<DAW>
+    <nombreCIclo>Desarrollo de Apps web</nombreCIclo>
+    <tipo>Grado superior</tipo>
+    <modulos>
+        <modulo>
+            <nombre>Entornos de Desarrollo</nombre>
+            <curso>1</curso>
+            <horas>3</horas>
+        </modulo>
+         <modulo>
+            <nombre>Entornos de Desarrollo</nombre>
+            <curso>1</curso>
+            <horas>3</horas>
+        </modulo>
+         <modulo>
+            <nombre>Entornos de Desarrollo</nombre>
+            <curso>1</curso>
+            <horas>3</horas>
+        </modulo>
+         <modulo>
+            <nombre>Entornos de Desarrollo</nombre>
+            <curso>1</curso>
+            <horas>3</horas>
+        </modulo>
+         <modulo>
+            <nombre>Entornos de Desarrollo</nombre>
+            <curso>1</curso>
+            <horas>3</horas>
+        </modulo>
+    </modulos>
+</DAW>
